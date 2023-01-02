@@ -13,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { WindowComponent } from './components/window/window.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     NavbarComponent,
     HomeComponent,
     ProjectCardComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    WindowComponent
   ],
   imports: [
     BrowserModule,

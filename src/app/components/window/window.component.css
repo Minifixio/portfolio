@@ -1,0 +1,30 @@
+.container {
+    border: 2px solid;
+    border-color: black;
+}
+
+#resize-tool {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent black;
+}
+
+#resize-tool:hover {
+    cursor: nwse-resize;
+}
+#resize-tool:active {
+    cursor: nwse-resize;
+}
+
+#top-bar {
+    background-color: black;
+    height: 15px;
+}
+
+#top-bar:hover {
+    cursor: all-scroll;
+}
