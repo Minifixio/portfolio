@@ -76,20 +76,25 @@ export class WindowComponent implements OnInit {
   }
 
   setResize(state: boolean) {
-    console.log(1)
     this.isResizing = state
   }
 
   setDragging(state: boolean, event: MouseEvent) {
-    console.log(2)
     this.isDragging = state
     if (state == true) {
       this.dragFrom = {x: event.clientX, y: event.clientY, left: this.left, top: this.top}
     }
   }
 
+  setDraggingMobile(state: boolean, event: TouchEvent) {
+    console.log(event.touches[0])
+    this.isDragging = state
+    if (state == true) {
+      this.dragFrom = {x: event.touches[0].clientX, y: event.touches[0].clientY, left: this.left, top: this.top}
+    }
+  }
+
   setBouding(bounding: Bounding) {
-    console.log(bounding)
     this.bounding = bounding;
   }
 

@@ -4,7 +4,13 @@
      [style.transform]="'translate3d(' + left + 'px,' + top + 'px,' + '0px)'"
      class="container"
 >
-    <div id="top-bar" (mousedown)="setDragging(true, $event)" (mouseup)="setDragging(false, $event)"></div>
+    <div 
+        id="top-bar" 
+        (touchstart)="setDraggingMobile(true, $event)"
+        (touchend)="setDraggingMobile(false, $event)"  
+        (mousedown)="setDragging(true, $event)" 
+        (mouseup)="setDragging(false, $event)">
+    </div>
 
     <div>
         <p>container</p>
