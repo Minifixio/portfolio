@@ -24,6 +24,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.projects = (<any>projects.projects)
   }
+
   ngAfterViewInit() {
     const boudingContainer = this.container.nativeElement.getBoundingClientRect()
     const bounding: Bounding = {

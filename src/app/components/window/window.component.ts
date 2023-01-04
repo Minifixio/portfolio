@@ -65,6 +65,35 @@ export class WindowComponent implements OnInit {
     }
   }
 
+  @HostListener('document:touchmove', ['$event']) 
+  onTouchMove(event: TouchEvent) {
+    if (this.isResizing && !this.isDragging) {
+      const newWidth = event.touches[0].clientX - this.left - this.container.nativeElement.offsetLeft
+      const newHeight = event.touches[0].clientY - this.top - this.container.nativeElement.offsetTop
+      if (
+        this.left + newWidth < this.bounding.right &&
+        this.top + newHeight < this.bounding.bottom
+        ) {
+          this.width = newWidth
+          this.height = newHeight
+      }
+    }
+    if (this.isDragging) {
+      const newLeft = this.dragFrom.left + (event.touches[0].clientX - this.dragFrom.x)
+      const newTop = this.dragFrom.top + (event.touches[0].clientY - this.dragFrom.y)
+      if (
+        newLeft > this.bounding.left &&
+        newLeft + this.width < this.bounding.right &&
+        newTop > 0 &&
+        newTop + this.height < this.bounding.bottom
+        ) {
+          this.left = newLeft
+          this.top = newTop
+      }
+
+    }
+  }
+
   @HostListener('document:click', ['$event']) 
   onMouseClick(event: MouseEvent) {
     console.log(event.clientX, event.clientY-65)
@@ -87,7 +116,7 @@ export class WindowComponent implements OnInit {
   }
 
   setDraggingMobile(state: boolean, event: TouchEvent) {
-    console.log(event.touches[0])
+    console.log('setDraggingMobile', state)
     this.isDragging = state
     if (state == true) {
       this.dragFrom = {x: event.touches[0].clientX, y: event.touches[0].clientY, left: this.left, top: this.top}
@@ -97,5 +126,6 @@ export class WindowComponent implements OnInit {
   setBouding(bounding: Bounding) {
     this.bounding = bounding;
   }
+
 
 }

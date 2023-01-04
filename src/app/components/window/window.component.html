@@ -16,5 +16,10 @@
         <p>container</p>
     </div>
     
-    <div id="resize-tool" (mousedown)="setResize(true)" (mouseup)="setResize(false)"></div>
+    <div 
+        id="resize-tool" 
+        (touchstart)="setResize(true)"
+        (touchend)="setResize(false)" 
+        (mousedown)="setResize(true)" 
+        (mouseup)="setResize(false)"></div>
 </div>
