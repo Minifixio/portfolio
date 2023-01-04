@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Project } from 'src/app/models/Project';
 import { Bounding } from 'src/app/models/Bounding';
-import projects from '../../../assets/projects/projects.json';
 import { WindowComponent } from 'src/app/components/window/window.component';
+
+import projects from '../../../assets/projects/projects.json';
+import template from './template'
 
 @Component({
   selector: 'app-projects',
@@ -18,6 +20,7 @@ export class ProjectsComponent implements OnInit {
   window!: WindowComponent
   
   projects: Project[] | undefined
+  template: string = template
 
   constructor() { }
 

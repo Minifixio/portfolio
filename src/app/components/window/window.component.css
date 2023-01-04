@@ -1,4 +1,4 @@
-.container {
+#container {
     border: 2px solid;
     border-color: black;
 }
@@ -49,4 +49,10 @@
 
 #close-button-bar:hover {
     cursor: pointer;
+}
+
+#content-div {
+    margin: 5px;
+    height: calc(100% - 20px);
+    overflow: scroll;
 }

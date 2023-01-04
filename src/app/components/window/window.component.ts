@@ -1,5 +1,5 @@
 import { ElementRef } from '@angular/core';
-import { Component, OnInit, Input, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, HostListener, ViewEncapsulation } from '@angular/core';
 import { Bounding } from 'src/app/models/Bounding';
 
 interface Drag {
@@ -12,7 +12,8 @@ interface Drag {
 @Component({
   selector: 'app-window',
   templateUrl: './window.component.html',
-  styleUrls: ['./window.component.css']
+  styleUrls: ['./window.component.css', '../../pages/projects/template.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class WindowComponent implements OnInit {
 
@@ -28,10 +29,15 @@ export class WindowComponent implements OnInit {
   @Input('top')
   top!: number
 
-  @ViewChild("container")
-  public container!: ElementRef
+  @Input('active')
+  active!: boolean
 
-  active: boolean = true
+  @Input('content')
+  content!: string
+
+  @ViewChild("container")
+  container!: ElementRef
+
   isResizing: boolean = false
   isDragging: boolean = false
   bounding!: Bounding

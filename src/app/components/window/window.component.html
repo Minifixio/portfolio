@@ -1,4 +1,5 @@
 <div #container 
+     id="container"
      [style.visibility]="active ? 'visible' : 'hidden'"
      [style.width.px]="width"
      [style.height.px]="height"
@@ -19,8 +20,8 @@
         </div>
     </div>
 
-    <div>
-        <p>container</p>
+    <div id="content-div">
+        <div [innerHTML]="content"></div>
     </div>
     
     <div 

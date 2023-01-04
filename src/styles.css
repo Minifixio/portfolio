@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font: 'Space Mono' !important; overflow:hidden;}
+body { margin: 0; overflow:hidden;}
 * {
     font-family: 'Space Mono', sans-serif !important; 
     /* Add !important to overwrite all elements */
   }
+html, body { height: 100%; }
+body { margin: 0; }

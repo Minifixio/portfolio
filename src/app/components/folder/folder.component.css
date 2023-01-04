@@ -1,0 +1,20 @@
+.folder {
+    height: 20vh;
+    width: 20vh;
+}
+
+.folder-svg:hover {
+    cursor: pointer;
+}
+
+.folder-name-div {
+    text-align: center;
+    margin-top: -5vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

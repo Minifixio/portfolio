@@ -1,6 +1,14 @@
 <div #container class="container">
-    <!-- <div *ngFor="let project of projects">
-        <app-project-card [project]="project"></app-project-card>
-    </div> -->
-    <app-window #window [width]="300" [height]="150" [left]="50" [top]="50"></app-window>
+    <app-window 
+        #window 
+        [width]="300" 
+        [height]="150" 
+        [left]="50" 
+        [top]="50" 
+        [active]="true"
+        [content]="template">
+    </app-window>
+
+    <app-folder name="folder 1"></app-folder>
+
 </div>
