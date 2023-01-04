@@ -14,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { WindowComponent } from './components/window/window.component';
+import { FolderComponent } from './components/folder/folder.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WindowComponent } from './components/window/window.component';
     HomeComponent,
     ProjectCardComponent,
     ProjectsComponent,
-    WindowComponent
+    WindowComponent,
+    FolderComponent
   ],
   imports: [
     BrowserModule,

@@ -28,3 +28,25 @@
 #top-bar:hover {
     cursor: all-scroll;
 }
+
+#close-button {
+    background-color: red;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    right: 1px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-button-bar {
+    background-color: black;
+    width: 11px;
+    height: 3px;
+}
+
+#close-button-bar:hover {
+    cursor: pointer;
+}

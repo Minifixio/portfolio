@@ -31,6 +31,7 @@ export class WindowComponent implements OnInit {
   @ViewChild("container")
   public container!: ElementRef
 
+  active: boolean = true
   isResizing: boolean = false
   isDragging: boolean = false
   bounding!: Bounding
@@ -127,5 +128,8 @@ export class WindowComponent implements OnInit {
     this.bounding = bounding;
   }
 
+  close() {
+    this.active = false
+  }
 
 }
