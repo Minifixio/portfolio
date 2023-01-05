@@ -17,9 +17,6 @@ export class ProjectsComponent implements OnInit {
   @ViewChild("container")
   container!: ElementRef
 
-  // @ViewChild("window")
-  // window!: WindowComponent
-
   @ViewChildren('windows')
   windows!: QueryList<WindowComponent>
 
@@ -36,16 +33,16 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    const boudingContainer = this.container.nativeElement.getBoundingClientRect()
+    const bounding: Bounding = {
+      top: boudingContainer.top,
+      right: boudingContainer.right,
+      bottom: boudingContainer.bottom,
+      left: boudingContainer.left
+    }
     for (let window of this.windows.toArray()) {
-      const boudingContainer = this.container.nativeElement.getBoundingClientRect()
-      const bounding: Bounding = {
-        top: boudingContainer.top,
-        right: boudingContainer.right,
-        bottom: boudingContainer.bottom,
-        left: boudingContainer.left
-      }
       window.setBouding(bounding)
-      console.log(bounding)
+      window.setSize()
     }
     for (let [i, folder] of this.folders.toArray().entries()) {
       folder.showWindowFromId = this.showWindowFromId

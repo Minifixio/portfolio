@@ -111,6 +111,11 @@ export class WindowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  setSize() {
+    this.width = (this.bounding.right - this.bounding.left)*0.9
+    this.height = (this.bounding.bottom - this.bounding.top)*0.9
+  }
+
   setResize(state: boolean) {
     this.isResizing = state
   }
