@@ -12,7 +12,7 @@ interface Drag {
 @Component({
   selector: 'app-window',
   templateUrl: './window.component.html',
-  styleUrls: ['./window.component.css', '../../pages/projects/template.css'],
+  styleUrls: ['./window.component.css', '../../../assets/projects/project1.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class WindowComponent implements OnInit {

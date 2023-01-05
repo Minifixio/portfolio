@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { Project } from 'src/app/models/Project';
 import { Bounding } from 'src/app/models/Bounding';
 import { WindowComponent } from 'src/app/components/window/window.component';
 
 import projects from '../../../assets/projects/projects.json';
-import template from '../../../assets/projects/project1'
+import project1 from '../../../assets/projects/project1'
+import { FolderComponent } from 'src/app/components/folder/folder.component';
 
 @Component({
   selector: 'app-projects',
@@ -16,11 +17,17 @@ export class ProjectsComponent implements OnInit {
   @ViewChild("container")
   container!: ElementRef
 
-  @ViewChild("window")
-  window!: WindowComponent
+  // @ViewChild("window")
+  // window!: WindowComponent
+
+  @ViewChildren('windows')
+  windows!: QueryList<WindowComponent>
+
+  @ViewChildren('folders')
+  folders!: QueryList<FolderComponent>
   
   projects: Project[] | undefined
-  template: string = template
+  project1: string = project1
 
   constructor() { }
 
@@ -29,14 +36,24 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    const boudingContainer = this.container.nativeElement.getBoundingClientRect()
-    const bounding: Bounding = {
-      top: boudingContainer.top,
-      right: boudingContainer.right,
-      bottom: boudingContainer.bottom,
-      left: boudingContainer.left
+    for (let window of this.windows.toArray()) {
+      const boudingContainer = this.container.nativeElement.getBoundingClientRect()
+      const bounding: Bounding = {
+        top: boudingContainer.top,
+        right: boudingContainer.right,
+        bottom: boudingContainer.bottom,
+        left: boudingContainer.left
+      }
+      window.setBouding(bounding)
+      console.log(bounding)
     }
-    this.window.setBouding(bounding)
+    for (let [i, folder] of this.folders.toArray().entries()) {
+      folder.showWindowFromId = this.showWindowFromId
+      folder.setWindow(this.windows.toArray()[i])
+    }
   }
 
+  showWindowFromId(id: number) {
+    this.windows.toArray()[id].active = true
+  }
 }

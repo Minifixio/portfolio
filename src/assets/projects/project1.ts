@@ -1,4 +1,4 @@
-const template = `
+const project1 = `
 <div class="main">
 <h1 id="biggest-circle-inscribed-in-a-polygon">Biggest Circle Inscribed In A Polygon</h1>
 <p><em>A year project carried during my last year of &quot;Classe préparatoire&quot; meant to deal with Mathematics and Computer Science related topics.</em></p>
@@ -73,4 +73,4 @@ const template = `
 </div>
 `;
 
-export default template;
+export default project1;

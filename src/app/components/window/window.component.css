@@ -52,7 +52,8 @@
 }
 
 #content-div {
-    margin: 5px;
-    height: calc(100% - 20px);
+    padding: 5px;
+    height: calc(100% - 25px);
     overflow: scroll;
+    background-color: #f7f7f7;
 }
