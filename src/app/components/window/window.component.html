@@ -1,6 +1,7 @@
 <div #container 
      id="container"
      [style.visibility]="active ? 'visible' : 'hidden'"
+     [style.opacity]="active ? 1 : '0'"
      [style.width.px]="width"
      [style.height.px]="height"
      [style.transform]="'translate3d(' + left + 'px,' + top + 'px,' + '0px)'"

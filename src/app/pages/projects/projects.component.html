@@ -8,7 +8,7 @@
         [active]="true"
         [content]="template">
     </app-window> -->
-    <div *ngFor="let project of projects; let id=index;">
+    <div class="project-div" *ngFor="let project of projects; let id=index;">
         <!-- [showWindowFromId]="showWindowFromId" -->
         <app-folder 
             #folders

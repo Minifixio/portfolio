@@ -47,7 +47,8 @@ export class WindowComponent implements OnInit {
   onMouseMove(event: MouseEvent) {
     if (this.isResizing && !this.isDragging) {
       const newWidth = event.clientX - this.left - this.container.nativeElement.offsetLeft
-      const newHeight = event.clientY - this.top - this.container.nativeElement.offsetTop
+      const newHeight = event.clientY - this.top - this.bounding.top
+      console.log(newWidth, newHeight, this.bounding.top)
       if (
         this.left + newWidth < this.bounding.right &&
         this.top + newHeight < this.bounding.bottom
@@ -76,7 +77,7 @@ export class WindowComponent implements OnInit {
   onTouchMove(event: TouchEvent) {
     if (this.isResizing && !this.isDragging) {
       const newWidth = event.touches[0].clientX - this.left - this.container.nativeElement.offsetLeft
-      const newHeight = event.touches[0].clientY - this.top - this.container.nativeElement.offsetTop
+      const newHeight = event.touches[0].clientY - this.top - this.bounding.top
       if (
         this.left + newWidth < this.bounding.right &&
         this.top + newHeight < this.bounding.bottom
@@ -112,11 +113,21 @@ export class WindowComponent implements OnInit {
   }
 
   setSize() {
-    this.width = (this.bounding.right - this.bounding.left)*0.9
-    this.height = (this.bounding.bottom - this.bounding.top)*0.9
+    setTimeout(() => {
+      this.width = (this.bounding.right - this.bounding.left)*0.9
+      this.height = (this.bounding.bottom - this.bounding.top)*0.9
+    }, 500)
+  }
+
+  setPosition() {
+    setTimeout(() => {
+      this.top = (this.bounding.bottom - this.bounding.top)*0.05
+      this.left = (this.bounding.right - this.bounding.left)*0.1 * 1/2
+    }, 500)
   }
 
   setResize(state: boolean) {
+    console.log('setResize', state)
     this.isResizing = state
   }
 

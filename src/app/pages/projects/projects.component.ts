@@ -43,6 +43,7 @@ export class ProjectsComponent implements OnInit {
     for (let window of this.windows.toArray()) {
       window.setBouding(bounding)
       window.setSize()
+      window.setPosition()
     }
     for (let [i, folder] of this.folders.toArray().entries()) {
       folder.showWindowFromId = this.showWindowFromId
