@@ -10,6 +10,8 @@
 .folder-name-div {
     text-align: center;
     margin-top: -5vh;
+    word-wrap:normal;
+    width: 100%;
 }
 
 .container {
@@ -17,4 +19,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 20vh;
 }

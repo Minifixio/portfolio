@@ -4,7 +4,7 @@ import { Bounding } from 'src/app/models/Bounding';
 import { WindowComponent } from 'src/app/components/window/window.component';
 
 import projects from '../../../assets/projects/projects.json';
-import template from './template'
+import template from '../../../assets/projects/project1'
 
 @Component({
   selector: 'app-projects',

@@ -1,5 +1,5 @@
 <div #container class="container">
-    <app-window 
+    <!-- <app-window 
         #window 
         [width]="300" 
         [height]="150" 
@@ -7,8 +7,8 @@
         [top]="50" 
         [active]="true"
         [content]="template">
-    </app-window>
-
-    <app-folder name="folder 1"></app-folder>
-
+    </app-window> -->
+    <div *ngFor="let project of projects">
+        <app-folder [name]="project.name"></app-folder>
+    </div>
 </div>
