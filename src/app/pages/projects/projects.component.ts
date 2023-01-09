@@ -3,7 +3,6 @@ import { Project } from 'src/app/models/Project';
 import { Bounding } from 'src/app/models/Bounding';
 
 import projects from '../../../assets/projects/projects.json';
-import project1 from '../../../assets/projects/project1'
 import { FolderComponent } from 'src/app/components/folder/folder.component';
 
 @Component({
@@ -16,18 +15,10 @@ export class ProjectsComponent implements OnInit {
   @ViewChild("container")
   container!: ElementRef
 
-  // @ViewChildren('windows')
-  // windows!: QueryList<WindowComponent>
-
-  // @ViewChildren('files')
-  // files!: QueryList<FileComponent>
-
   @ViewChildren('folders')
   folders!: QueryList<FolderComponent>
   
   projects!: Project[]
-
-  project1: string = project1
 
   constructor() { }
 
@@ -48,18 +39,6 @@ export class ProjectsComponent implements OnInit {
       folder.window.setSize()
       folder.window.setPosition()
     }
-    // for (let window of this.windows.toArray()) {
-    //   window.setBouding(bounding)
-    //   window.setSize()
-    //   window.setPosition()
-    // }
-    // for (let [i, folder] of this.files.toArray().entries()) {
-    //   folder.showWindowFromId = this.showWindowFromId
-    //   folder.setWindow(this.windows.toArray()[i])
-    // }
   }
 
-  // showWindowFromId(id: number) {
-  //   this.windows.toArray()[id].active = true
-  // }
 }

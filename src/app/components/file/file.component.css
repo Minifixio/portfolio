@@ -1,7 +1,7 @@
 .file {
-    height: 20vh;
-    width: 20vh;
-    transition: all .2s ease-in-out; 
+    height: 15vh;
+    width: 15vh;
+    transition: transform .2s ease-in-out; 
 }
 
 .file-svg:hover {
@@ -24,12 +24,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30vh;
+    width: 20vh;
 }
 
 .window {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     visibility: hidden;
     top:64px;
     right: 0;

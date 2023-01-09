@@ -63,3 +63,9 @@
     position: absolute;
     color: white;
 }
+
+.folder-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

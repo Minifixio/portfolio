@@ -1,7 +1,7 @@
 .link {
-    height: 20vh;
-    width: 20vh;
-    transition: all .2s ease-in-out; 
+    height: 15vh;
+    width: 15vh;
+    transition: transform .2s ease-in-out; 
 }
 
 .link-svg:hover {

@@ -1,6 +1,6 @@
 <div class="folder-content-div">
     <div *ngFor="let file of folder.files">
-        <app-file [name]="file.name" [contentFileName]="file.contentFileName" [parentFolder]="file.parentFolder"></app-file>
+        <app-file [bounding]="bounding" [name]="file.name" [contentFileName]="file.contentFileName" [parentFolder]="file.parentFolder"></app-file>
     </div>
     <div *ngFor="let link of folder.links">
         <app-link [name]="link.name" [link]="link.link" [iconName]="link.iconName"></app-link>

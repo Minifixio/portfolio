@@ -13,7 +13,7 @@ interface Drag {
 @Component({
   selector: 'app-window',
   templateUrl: './window.component.html',
-  styleUrls: ['./window.component.css', '../../../assets/projects/project1.css'],
+  styleUrls: ['./window.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class WindowComponent implements OnInit {
@@ -44,6 +44,9 @@ export class WindowComponent implements OnInit {
 
   @ViewChild("container")
   container!: ElementRef
+
+  @ViewChild("contentDiv")
+  contentDiv!: ElementRef
 
   isResizing: boolean = false
   isDragging: boolean = false
@@ -119,17 +122,31 @@ export class WindowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewInit() {
+
+  }
+
   setSize() {
     setTimeout(() => {
-      this.width = (this.bounding.right - this.bounding.left)*0.9
-      this.height = (this.bounding.bottom - this.bounding.top)*0.9
+      if (this.isFolder) {
+        this.width = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetWidth*1.1
+        this.height = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetHeight*1.1
+      } else {
+        this.width = (this.bounding.right - this.bounding.left)*0.9
+        this.height = (this.bounding.bottom - this.bounding.top)*0.9
+      }
     }, 500)
   }
 
   setPosition() {
     setTimeout(() => {
-      this.top = (this.bounding.bottom - this.bounding.top)*0.05
-      this.left = (this.bounding.right - this.bounding.left)*0.1 * 1/2
+      if (this.isFolder) {
+        this.top = (this.bounding.bottom - this.bounding.top)*0.05
+        this.left = (this.bounding.right - this.bounding.left - this.contentDiv.nativeElement.childNodes[1].firstChild.offsetWidth) * 1/2
+      } else {
+        this.top = (this.bounding.bottom - this.bounding.top)*0.05
+        this.left = (this.bounding.right - this.bounding.left)*0.1 * 1/2
+      }
     }, 500)
   }
 
