@@ -24,7 +24,7 @@
 
     <div id="content-div" #contentDiv>
         <div *ngIf="!isFolder" [innerHTML]="content"></div>
-        <app-folder-content *ngIf="isFolder" [bounding]="bounding" [folder]="folder" class="folder-content"></app-folder-content>
+        <app-folder-content *ngIf="isFolder" #windowContent [folder]="folder" class="folder-content"></app-folder-content>
     </div>
     
     <div 

@@ -37,8 +37,9 @@ export class FileComponent implements OnInit, File {
     this.contentInnerHTML = project1
   }
 
-  ngAfterViewInit() {
-    this.window.setBouding(this.bounding)
+  setBounding(bounding: Bounding) {
+    this.bounding = bounding
+    this.window.setBounding(bounding)
     this.window.setSize()
     this.window.setPosition()
   }

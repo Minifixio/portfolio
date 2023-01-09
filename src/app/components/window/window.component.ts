@@ -2,6 +2,7 @@ import { ElementRef } from '@angular/core';
 import { Component, OnInit, Input, ViewChild, HostListener, ViewEncapsulation } from '@angular/core';
 import { Bounding } from 'src/app/models/Bounding';
 import { Folder } from 'src/app/models/Folder';
+import { FolderContentComponent } from '../folder-content/folder-content.component';
 
 interface Drag {
   x: number
@@ -41,6 +42,9 @@ export class WindowComponent implements OnInit {
 
   @Input('folder')
   folder!: Folder
+
+  @ViewChild("windowContent")
+  windowContent!: FolderContentComponent
 
   @ViewChild("container")
   container!: ElementRef
@@ -151,11 +155,11 @@ export class WindowComponent implements OnInit {
   }
 
   setResize(state: boolean) {
-    console.log('setResize', state)
     this.isResizing = state
   }
 
   setDragging(state: boolean, event: MouseEvent) {
+    console.log(this.bounding)
     this.isDragging = state
     if (state == true) {
       this.dragFrom = {x: event.clientX, y: event.clientY, left: this.left, top: this.top}
@@ -163,15 +167,19 @@ export class WindowComponent implements OnInit {
   }
 
   setDraggingMobile(state: boolean, event: TouchEvent) {
-    console.log('setDraggingMobile', state)
     this.isDragging = state
     if (state == true) {
       this.dragFrom = {x: event.touches[0].clientX, y: event.touches[0].clientY, left: this.left, top: this.top}
     }
   }
 
-  setBouding(bounding: Bounding) {
+  setBounding(bounding: Bounding) {
     this.bounding = bounding;
+    if (this.isFolder) {
+      this.windowContent.setBounding(bounding)
+    } else {
+      console.log(bounding)
+    }
   }
 
   close() {

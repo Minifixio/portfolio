@@ -24,11 +24,10 @@ export class FolderComponent implements OnInit, Folder {
   @Input('links')
   links!: Link[];
 
-  @Input('bouding')
-  bouding!: Bounding;
-
   @ViewChild("window")
   window!: WindowComponent
+
+  bouding!: Bounding;
   
   constructor() {}
 
@@ -37,6 +36,13 @@ export class FolderComponent implements OnInit, Folder {
 
   click() {
     this.window.active = true
+  }
+
+  setBounding(bounding: Bounding) {
+    this.bouding = bounding
+    this.window.setBounding(bounding)
+    this.window.setPosition()
+    this.window.setSize()
   }
 
   getFolder(): Folder {

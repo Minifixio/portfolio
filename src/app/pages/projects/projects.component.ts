@@ -34,10 +34,9 @@ export class ProjectsComponent implements OnInit {
       bottom: boudingContainer.bottom,
       left: boudingContainer.left
     }
+    console.log('Bounding page projects : ', bounding)
     for (let folder of this.folders.toArray()) {
-      folder.window.setBouding(bounding)
-      folder.window.setSize()
-      folder.window.setPosition()
+      folder.setBounding(bounding)
     }
   }
 
