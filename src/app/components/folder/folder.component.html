@@ -6,3 +6,16 @@
     </svg>
     <div class="folder-name-div">{{name}}</div>
 </div>
+
+<app-window
+    #window
+    class="window"
+    [width]="300" 
+    [height]="150" 
+    [left]="50" 
+    [top]="50" 
+    [active]="false"
+    [isFolder]="true"
+    [folder]="getFolder()"
+    >
+</app-window>

@@ -13,7 +13,7 @@ export class ProjectComponent implements OnInit, Project {
 
   name!: string;
   description!: string;
-  folders!: Folder[] | null;
+  subFolders!: Folder[];
   files!: File[];
   links!: Link[];
 

@@ -23,7 +23,7 @@
 
 #top-bar {
     background-color: black;
-    height: 15px;
+    height: 20px;
 }
 
 #top-bar:hover {
@@ -32,10 +32,10 @@
 
 #close-button {
     background-color: red;
-    width: 13px;
-    height: 13px;
+    width: 18px;
+    height: 18px;
     position: absolute;
-    right: 1px;
+    right: 0;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -54,7 +54,12 @@
 
 #content-div {
     padding: 5px;
-    height: calc(100% - 25px);
+    height: calc(100% - 30px);
     overflow: scroll;
     background-color: #f7f7f7;
+}
+
+#tab-name {
+    position: absolute;
+    color: white;
 }

@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Folder } from 'src/app/models/Folder';
+import { File } from 'src/app/models/File';
 import { WindowComponent } from '../window/window.component';
+import { Link } from 'src/app/models/Link';
 
 @Component({
   selector: 'app-folder',
@@ -9,30 +11,43 @@ import { WindowComponent } from '../window/window.component';
 })
 export class FolderComponent implements OnInit, Folder {
 
+  // @Input('id')
+  // id!: number
+
+  // @Input('showWindowFromId')
+  // showWindowFromId!: (args: number) => void
+
   @Input('name')
   name!: string
 
-  @Input('id')
-  id!: number
-
-  @Input('showWindowFromId')
-  showWindowFromId!: (args: number) => void
-
-  window!: WindowComponent
+  @Input('files')
   files!: File[];
+
+  @Input('subFolders')
+  subFolders!: Folder[];
+
+  @Input('links')
+  links!: Link[];
+
+  @ViewChild("window")
+  window!: WindowComponent
   
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
 
-  setWindow(window: WindowComponent) {
-    this.window = window
-    console.log(window)
-  }
-
   click() {
     this.window.active = true
+  }
+
+  getFolder(): Folder {
+    return {
+      name: this.name,
+      files: this.files,
+      links: this.links,
+      subFolders: this.subFolders
+    }
   }
 
 }

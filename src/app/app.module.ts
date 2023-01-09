@@ -18,6 +18,7 @@ import { FolderComponent } from './components/folder/folder.component';
 import { FolderContentComponent } from './components/folder-content/folder-content.component';
 import { FileComponent } from './components/file/file.component';
 import { ProjectComponent } from './components/project/project.component';
+import { LinkComponent } from './components/link/link.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProjectComponent } from './components/project/project.component';
     FolderComponent,
     FolderContentComponent,
     FileComponent,
-    ProjectComponent
+    ProjectComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,

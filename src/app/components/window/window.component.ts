@@ -1,6 +1,7 @@
 import { ElementRef } from '@angular/core';
 import { Component, OnInit, Input, ViewChild, HostListener, ViewEncapsulation } from '@angular/core';
 import { Bounding } from 'src/app/models/Bounding';
+import { Folder } from 'src/app/models/Folder';
 
 interface Drag {
   x: number
@@ -34,6 +35,12 @@ export class WindowComponent implements OnInit {
 
   @Input('content')
   content!: string
+
+  @Input('isFolder')
+  isFolder!: boolean
+
+  @Input('folder')
+  folder!: Folder
 
   @ViewChild("container")
   container!: ElementRef

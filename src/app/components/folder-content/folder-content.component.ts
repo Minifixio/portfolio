@@ -9,11 +9,8 @@ import { File } from 'src/app/models/File';
 })
 export class FolderContentComponent implements OnInit {
 
-  @Input('folders')
-  folders!: Folder[]
-  
-  @Input('files')
-  files!: File[]
+  @Input('folder')
+  folder!: Folder
 
   constructor() { }
 

@@ -2,10 +2,6 @@ import { Folder } from "./Folder";
 import { File } from "./File";
 import { Link } from "./Link";
 
-export interface Project {
-    name: string,
+export interface Project extends Folder {
     description: string,
-    folders: Folder[] | null
-    files: File[]
-    links: Link[]
 }

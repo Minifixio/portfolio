@@ -3,7 +3,7 @@
         {
             "name": "Unlask",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "folders": null,
+            "subFolders": [],
             "files": [
                 {
                     "name": "Unlask",
@@ -22,7 +22,7 @@
         {
             "name": "BlackBoard Collaborate BOT",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "folders": null,
+            "subFolder": [],
             "files": [
                 {
                     "name": "BlackBoard Collaborate BOT",
@@ -41,7 +41,7 @@
         {
             "name": "Highlit",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "folders": null,
+            "subFolders": [],
             "files": [
                 {
                     "name": "Highlit",
@@ -60,7 +60,7 @@
         {
             "name": "Biggest Circle Inscribed In A Polygon",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "folders": null,
+            "subFolders": [],
             "files": [
                 {
                     "name": "Biggest Circle Inscribed In A Polygon",
@@ -79,7 +79,7 @@
         {
             "name": "WewDashboard",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "folders": null,
+            "subFolders": [],
             "files": [
                 {
                     "name": "WewDashboard",
@@ -98,7 +98,7 @@
         {
             "name": "Sportify",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "folders": null,
+            "subFolders": [],
             "files": [
                 {
                     "name": "Sportify",

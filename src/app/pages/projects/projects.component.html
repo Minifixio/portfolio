@@ -1,23 +1,14 @@
 <div #container class="container">
-    <!-- <app-window 
-        #window 
-        [width]="300" 
-        [height]="150" 
-        [left]="50" 
-        [top]="50" 
-        [active]="true"
-        [content]="template">
-    </app-window> -->
     <div class="project-div" *ngFor="let project of projects; let id=index;">
-        <!-- [showWindowFromId]="showWindowFromId" -->
-        <app-file
-            #files
+        <app-folder
+            #folders
             [name]="project.name" 
-            [id]="id"
-            [contentFileName]="project.contentFileName"
+            [files]="project.files"
+            [subFolders]="project.subFolders"
+            [links]="project.links"
             >
-        </app-file>
-        <app-window
+        </app-folder>
+        <!-- <app-window
             #windows
             class="window"
             [width]="300" 
@@ -26,6 +17,6 @@
             [top]="50" 
             [active]="false"
             [content]="project1">
-        </app-window>
+        </app-window> -->
     </div>
 </div>
