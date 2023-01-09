@@ -1,9 +1,21 @@
-<p>file works!</p>
 <div class="container">
-    <svg width="700pt" height="700pt" version="1.1" viewBox="0 0 700 700" class="folder">
-        <g class="folder-svg" (click)="click()">
-            <path d="m563.19 103.67h-109.24c-13.238 0-25.262 7.7227-30.773 19.762l-5.5664 12.168-198.39 0.003907c-17.457 0-32.223 12.898-34.57 30.191l-2.8281 20.82h-45c-16.324 0-28.895 14.398-26.699 30.57l33.707 239.14h400.95l45.109-322.09c2.1992-16.168-10.371-30.566-26.695-30.566zm-9.0664 93.324-23.262 160.47-20.777-147.54c-1.8125-13.355-13.223-23.312-26.699-23.312l-270.85 0.003906c3.0195-9.3398 11.75-15.922 21.855-15.922h296.97c14.012 0 24.77 12.426 22.762 26.297z"/>
-       </g>
+    <svg fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 25 25" class="file">
+        <g class="file-svg" (click)="click()">
+            <path d="M22 24h-20v-24h14l6 6v18zm-7-23h-12v22h18v-16h-6v-6zm3 15v1h-12v-1h12zm0-3v1h-12v-1h12zm0-3v1h-12v-1h12zm-2-4h4.586l-4.586-4.586v4.586z"/>
+        </g>
     </svg>
-    <div class="folder-name-div">{{name}}</div>
+    <div class="file-name-div">{{name}}</div>
 </div>
+
+<app-window
+    #window
+    class="window"
+    [width]="300" 
+    [height]="150" 
+    [left]="50" 
+    [top]="50" 
+    [active]="false"
+    [isFolder]="false"
+    [content]="contentInnerHTML"
+    >
+</app-window>

@@ -4,10 +4,7 @@ import { Bounding } from 'src/app/models/Bounding';
 
 import projects from '../../../assets/projects/projects.json';
 import project1 from '../../../assets/projects/project1'
-import { WindowComponent } from 'src/app/components/window/window.component';
-import { FileComponent } from 'src/app/components/file/file.component';
 import { FolderComponent } from 'src/app/components/folder/folder.component';
-import { Folder } from 'src/app/models/Folder';
 
 @Component({
   selector: 'app-projects',

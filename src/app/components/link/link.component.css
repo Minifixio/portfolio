@@ -1,0 +1,28 @@
+.link {
+    height: 20vh;
+    width: 20vh;
+    transition: all .2s ease-in-out; 
+}
+
+.link-svg:hover {
+    cursor: pointer;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.link-name-div {
+    text-align: center;
+    word-wrap:normal;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+}

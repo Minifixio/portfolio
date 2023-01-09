@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-link',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinkComponent implements OnInit {
 
+  @Input('name')
+  name!: string
+
+  @Input('link')
+  link!: string
+
+  @Input('iconName')
+  iconName!: string
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  click() {
+    
   }
 
 }

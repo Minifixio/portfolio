@@ -11,12 +11,6 @@ import { Link } from 'src/app/models/Link';
 })
 export class FolderComponent implements OnInit, Folder {
 
-  // @Input('id')
-  // id!: number
-
-  // @Input('showWindowFromId')
-  // showWindowFromId!: (args: number) => void
-
   @Input('name')
   name!: string
 

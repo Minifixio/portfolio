@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { WindowComponent } from '../window/window.component';
 import { File } from '../../models/File';
 import { Folder } from 'src/app/models/Folder';
+
+import project1 from '../../../assets/projects/project1'
 
 @Component({
   selector: 'app-file',
@@ -13,28 +15,25 @@ export class FileComponent implements OnInit, File {
   @Input('name')
   name!: string
 
-  @Input('id')
-  id!: number
-
-  @Input('showWindowFromId')
-  showWindowFromId!: (args: number) => void
-
   @Input('contentFileName')
   contentFileName!: string;
 
   @Input('parentFolder')
   parentFolder!: Folder;
 
+  @ViewChild("window")
   window!: WindowComponent
+
+  contentInnerHTML!: string
 
   constructor() { }
 
   ngOnInit(): void {
+    this.contentInnerHTML = project1
   }
 
   setWindow(window: WindowComponent) {
     this.window = window
-    console.log(window)
   }
 
   click() {
