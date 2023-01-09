@@ -12,20 +12,24 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 
 import { HomeComponent } from './pages/home/home.component';
-import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { WindowComponent } from './components/window/window.component';
 import { FolderComponent } from './components/folder/folder.component';
+import { FolderContentComponent } from './components/folder-content/folder-content.component';
+import { FileComponent } from './components/file/file.component';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ProjectCardComponent,
     ProjectsComponent,
     WindowComponent,
-    FolderComponent
+    FolderComponent,
+    FolderContentComponent,
+    FileComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

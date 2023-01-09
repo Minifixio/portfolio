@@ -1,13 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Folder } from 'src/app/models/Folder';
 import { WindowComponent } from '../window/window.component';
+import { File } from '../../models/File';
+import { Folder } from 'src/app/models/Folder';
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.component.html',
-  styleUrls: ['./folder.component.css']
+  selector: 'app-file',
+  templateUrl: './file.component.html',
+  styleUrls: ['./file.component.css']
 })
-export class FolderComponent implements OnInit, Folder {
+export class FileComponent implements OnInit, File {
 
   @Input('name')
   name!: string
@@ -18,9 +19,14 @@ export class FolderComponent implements OnInit, Folder {
   @Input('showWindowFromId')
   showWindowFromId!: (args: number) => void
 
+  @Input('contentFileName')
+  contentFileName!: string;
+
+  @Input('parentFolder')
+  parentFolder!: Folder;
+
   window!: WindowComponent
-  files!: File[];
-  
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { Project } from 'src/app/models/Project';
 import { Bounding } from 'src/app/models/Bounding';
-import { WindowComponent } from 'src/app/components/window/window.component';
 
 import projects from '../../../assets/projects/projects.json';
 import project1 from '../../../assets/projects/project1'
+import { WindowComponent } from 'src/app/components/window/window.component';
+import { FileComponent } from 'src/app/components/file/file.component';
 import { FolderComponent } from 'src/app/components/folder/folder.component';
 
 @Component({
@@ -19,6 +20,9 @@ export class ProjectsComponent implements OnInit {
 
   @ViewChildren('windows')
   windows!: QueryList<WindowComponent>
+
+  @ViewChildren('files')
+  files!: QueryList<FileComponent>
 
   @ViewChildren('folders')
   folders!: QueryList<FolderComponent>
@@ -45,7 +49,7 @@ export class ProjectsComponent implements OnInit {
       window.setSize()
       window.setPosition()
     }
-    for (let [i, folder] of this.folders.toArray().entries()) {
+    for (let [i, folder] of this.files.toArray().entries()) {
       folder.showWindowFromId = this.showWindowFromId
       folder.setWindow(this.windows.toArray()[i])
     }

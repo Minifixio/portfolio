@@ -1,0 +1,26 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { File } from 'src/app/models/File';
+import { Folder } from 'src/app/models/Folder';
+import { Link } from 'src/app/models/Link';
+import { Project } from 'src/app/models/Project';
+
+@Component({
+  selector: 'app-project',
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.css']
+})
+export class ProjectComponent implements OnInit, Project {
+
+  name!: string;
+  description!: string;
+  folders!: Folder[] | null;
+  files!: File[];
+  links!: Link[];
+
+  constructor() { }
+  
+
+  ngOnInit(): void {
+  }
+
+}

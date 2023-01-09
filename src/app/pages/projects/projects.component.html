@@ -10,12 +10,14 @@
     </app-window> -->
     <div class="project-div" *ngFor="let project of projects; let id=index;">
         <!-- [showWindowFromId]="showWindowFromId" -->
-        <app-folder 
-            #folders
+        <app-file
+            #files
             [name]="project.name" 
-            [id]="id">
-        </app-folder>
-        <app-window 
+            [id]="id"
+            [contentFileName]="project.contentFileName"
+            >
+        </app-file>
+        <app-window
             #windows
             class="window"
             [width]="300" 

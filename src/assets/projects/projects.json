@@ -3,38 +3,116 @@
         {
             "name": "Unlask",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "link": "https://github.com/Minifixio/unlask-app",
-            "cover": ""
+            "folders": null,
+            "files": [
+                {
+                    "name": "Unlask",
+                    "contentFileName": "project1",
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/unlask-app",
+                    "iconName": "github"
+                }
+            ]
         },
         {
             "name": "BlackBoard Collaborate BOT",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "link": "https://github.com/Minifixio/blackboard-collab-bot",
-            "cover": ""
+            "folders": null,
+            "files": [
+                {
+                    "name": "BlackBoard Collaborate BOT",
+                    "contentFileName": "project1",
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/blackboard-collab-bot",
+                    "iconName": "github"
+                }
+            ]
         },
         {
             "name": "Highlit",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "link": "https://github.com/Minifixio/Highlit",
-            "cover": ""
+            "folders": null,
+            "files": [
+                {
+                    "name": "Highlit",
+                    "contentFileName": "project1",
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/Highlit",
+                    "iconName": "github"
+                }
+            ]
         },
         {
             "name": "Biggest Circle Inscribed In A Polygon",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "link": "https://github.com/Minifixio/TIPE_2021",
-            "cover": ""
+            "folders": null,
+            "files": [
+                {
+                    "name": "Biggest Circle Inscribed In A Polygon",
+                    "contentFileName": "project1",
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/TIPE_2021",
+                    "iconName": "github"
+                }
+            ]
         },
         {
             "name": "WewDashboard",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "link": "https://github.com/Minifixio/WewDashboard",
-            "cover": ""
+            "folders": null,
+            "files": [
+                {
+                    "name": "WewDashboard",
+                    "contentFileName": "project1",
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/WewDashboard",
+                    "iconName": "github"
+                }
+            ]
         },
         {
             "name": "Sportify",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "link": "https://github.com/Minifixio/Sportify",
-            "cover":""
+            "folders": null,
+            "files": [
+                {
+                    "name": "Sportify",
+                    "contentFileName": "project1",
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/Sportify",
+                    "iconName": "github"
+                }
+            ]
         }
     ]
 }
