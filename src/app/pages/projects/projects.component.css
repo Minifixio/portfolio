@@ -19,3 +19,13 @@
 .project-div {
     height: fit-content;
 }
+
+.window {
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+    top:64px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -7,9 +7,8 @@
     <div class="file-name-div">{{name}}</div>
 </div>
 
-<app-window
+<!-- <app-window
     #window
-    [style.visibility]="windowActive ? 'visible' : 'hidden'"
     class="window"
     [width]="300" 
     [height]="150" 
@@ -17,6 +16,6 @@
     [top]="50" 
     [active]="false"
     [isFolder]="false"
-    [content]="contentInnerHTML"
+    [file]="getFile()"
     >
-</app-window>
+</app-window> -->

@@ -4,6 +4,8 @@ import { File } from 'src/app/models/File';
 import { WindowComponent } from '../window/window.component';
 import { Link } from 'src/app/models/Link';
 import { Bounding } from 'src/app/models/Bounding';
+import { WindowsManagerService } from 'src/app/services/windows-manager.service';
+import { Window } from 'src/app/models/Window';
 
 @Component({
   selector: 'app-folder',
@@ -24,25 +26,19 @@ export class FolderComponent implements OnInit, Folder {
   @Input('links')
   links!: Link[];
 
-  @ViewChild("window")
-  window!: WindowComponent
-
-  bouding!: Bounding;
+  window!: Window
   
-  constructor() {}
+  constructor(
+    private windowManagerService: WindowsManagerService
+  ) {}
 
   ngOnInit(): void {
+    this.window = this.windowManagerService.addFolderWindow(this)
   }
 
   click() {
-    this.window.active = true
-  }
-
-  setBounding(bounding: Bounding) {
-    this.bouding = bounding
-    this.window.setBounding(bounding)
-    this.window.setPosition()
-    this.window.setSize()
+    //this.window.active = true
+    this.windowManagerService.setWindowState(this.window.id, true)
   }
 
   getFolder(): Folder {

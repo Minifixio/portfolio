@@ -8,15 +8,18 @@
             [links]="project.links"
             >
         </app-folder>
-        <!-- <app-window
-            #windows
-            class="window"
-            [width]="300" 
-            [height]="150" 
-            [left]="50" 
-            [top]="50" 
-            [active]="false"
-            [content]="project1">
-        </app-window> -->
     </div>
+
+    <app-window *ngFor="let window of windows$ | async"
+        class="window"
+        [width]="window.width" 
+        [height]="window.height" 
+        [left]="window.left" 
+        [top]="window.top" 
+        [bounding]="window.bounding"
+        [active]="window.active"
+        [isFolder]="window.isFolder"
+        [folder]="window.folder"
+        [file]="window.file">
+    </app-window>
 </div>

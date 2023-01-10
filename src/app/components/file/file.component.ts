@@ -3,8 +3,10 @@ import { WindowComponent } from '../window/window.component';
 import { File } from '../../models/File';
 import { Folder } from 'src/app/models/Folder';
 
-import project1 from '../../../assets/projects/project1'
 import { Bounding } from 'src/app/models/Bounding';
+import { FilesService } from 'src/app/services/files.service';
+import { WindowsManagerService } from 'src/app/services/windows-manager.service';
+import { Window } from 'src/app/models/Window';
 
 @Component({
   selector: 'app-file',
@@ -16,8 +18,8 @@ export class FileComponent implements OnInit, File {
   @Input('name')
   name!: string
 
-  @Input('contentFileName')
-  contentFileName!: string;
+  @Input('fileContentID')
+  fileContentID!: number;
 
   @Input('parentFolder')
   parentFolder!: Folder;
@@ -25,29 +27,30 @@ export class FileComponent implements OnInit, File {
   @Input('bounding')
   bounding!: Bounding
 
-  @ViewChild("window")
-  window!: WindowComponent
+  contentInnerHTML!: string | undefined
+  window!: Window
 
-  contentInnerHTML!: string
-  windowActive: boolean = false
-
-  constructor() { }
+  constructor(
+    private filesService: FilesService,
+    private windowManagerService: WindowsManagerService
+  ) { }
 
   ngOnInit(): void {
-    this.contentInnerHTML = project1
+    this.contentInnerHTML = this.filesService.getFileContent(this.fileContentID)?.content
+    this.window = this.windowManagerService.addFileWindow(this)
   }
 
-  setBounding(bounding: Bounding) {
-    this.bounding = bounding
-    this.window.setBounding(bounding)
-    this.window.setSize()
-    this.window.setPosition()
+  getFile(): File {
+    return this
+  }
+
+  getFileContent() {
+    return this.filesService.getFileContent(this.fileContentID)
   }
 
   click() {
-    this.window.active = true
-    this.windowActive = !this.windowActive
-    console.log(this.windowActive)
+    //this.window.active = true
+    this.windowManagerService.setWindowState(this.window.id, true)
   }
 
 }

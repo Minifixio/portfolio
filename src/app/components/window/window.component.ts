@@ -1,7 +1,9 @@
 import { ElementRef } from '@angular/core';
 import { Component, OnInit, Input, ViewChild, HostListener, ViewEncapsulation } from '@angular/core';
 import { Bounding } from 'src/app/models/Bounding';
+import { File } from 'src/app/models/File';
 import { Folder } from 'src/app/models/Folder';
+import { Window } from 'src/app/models/Window';
 import { FolderContentComponent } from '../folder-content/folder-content.component';
 
 interface Drag {
@@ -31,20 +33,23 @@ export class WindowComponent implements OnInit {
   @Input('top')
   top!: number
 
+  @Input('bounding')
+  bounding!: Bounding
+
   @Input('active')
   active!: boolean
-
-  @Input('content')
-  content!: string
 
   @Input('isFolder')
   isFolder!: boolean
 
-  @Input('folder')
-  folder!: Folder
+  @Input('file')
+  file!: File | undefined
 
-  @ViewChild("windowContent")
-  windowContent!: FolderContentComponent
+  @Input('folder')
+  folder!: Folder | undefined
+
+  @ViewChild("folderContent")
+  folderContent!: FolderContentComponent
 
   @ViewChild("container")
   container!: ElementRef
@@ -52,9 +57,9 @@ export class WindowComponent implements OnInit {
   @ViewChild("contentDiv")
   contentDiv!: ElementRef
 
+  id!: number
   isResizing: boolean = false
   isDragging: boolean = false
-  bounding!: Bounding
   dragFrom = {} as Drag
 
   @HostListener('document:mousemove', ['$event']) 
@@ -124,10 +129,32 @@ export class WindowComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.setSize()
+    this.setPosition()
   }
 
-  ngAfterViewInit() {
+  getWindow() {
+    const res: Window = {
+      id: this.id,
+      width: this.width,
+      height: this.height,
+      left: this.left,
+      bounding: this.bounding,
+      top: this.top,
+      active: this.active,
+      isFolder: this.isFolder,
+      file: this.file,
+      folder: this.folder,
+    }
+    return res
+  }
 
+  setWindowID(id: number) {
+    this.id = id
+  }
+
+  getFileContent() {
+    return this.file?.getFileContent()
   }
 
   setSize() {
@@ -173,14 +200,14 @@ export class WindowComponent implements OnInit {
     }
   }
 
-  setBounding(bounding: Bounding) {
-    this.bounding = bounding;
-    if (this.isFolder) {
-      this.windowContent.setBounding(bounding)
-    } else {
-      console.log(bounding)
-    }
-  }
+  // setBounding(bounding: Bounding) {
+  //   this.bounding = bounding;
+  //   if (this.isFolder) {
+  //     this.folderContent.setBounding(bounding)
+  //   } else {
+  //     console.log(bounding)
+  //   }
+  // }
 
   close() {
     this.active = false

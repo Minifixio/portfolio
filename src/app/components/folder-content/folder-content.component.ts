@@ -26,11 +26,6 @@ export class FolderContentComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  setBounding(bounding: Bounding) {
-    console.log("he")
-    this.bounding = bounding
-    this.files.toArray().forEach(file => file.setBounding(bounding))
-  }
+  
 
 }
