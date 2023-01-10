@@ -48,7 +48,7 @@
     height: 3px;
 }
 
-#close-button-bar:hover {
+#close-button:hover {
     cursor: pointer;
 }
 
@@ -62,6 +62,11 @@
 #tab-name {
     position: absolute;
     color: white;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
 }
 
 .folder-content {

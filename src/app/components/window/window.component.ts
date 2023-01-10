@@ -17,7 +17,7 @@ interface Drag {
 @Component({
   selector: 'app-window',
   templateUrl: './window.component.html',
-  styleUrls: ['./window.component.css'],
+  styleUrls: ['./window.component.css', '../../../assets/projects/projects.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class WindowComponent implements OnInit {
@@ -149,8 +149,8 @@ export class WindowComponent implements OnInit {
   setSize() {
     setTimeout(() => {
       if (this.isFolder) {
-        this.width = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetWidth*1.1
-        this.height = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetHeight*1.1
+        this.width = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetWidth
+        this.height = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetHeight*1.2
       } else {
         this.width = (this.bounding.right - this.bounding.left)*0.9
         this.height = (this.bounding.bottom - this.bounding.top)*0.9

@@ -1,16 +1,21 @@
 <div #container class="container">
-    <div class="project-div" *ngFor="let project of projects; let id=index;">
-        <app-folder
-            #folders
-            [name]="project.name" 
-            [files]="project.files"
-            [subFolders]="project.subFolders"
-            [links]="project.links"
-            >
-        </app-folder>
-    </div>
+    <div class="projects-container">
+        <div class="project-div" *ngFor="let project of projects; let id=index;">
+            <app-folder
+                #folders
+                [name]="project.name" 
+                [files]="project.files"
+                [subFolders]="project.subFolders"
+                [links]="project.links"
+                >
+            </app-folder>
+        </div>
+    
 
-    <app-window *ngFor="let window of windows$ | async"
+    </div>
+    <app-window 
+        *ngFor="let window of windows$ | async"
+        #windows
         class="window"
         [id]="window.id"
         [width]="window.width" 

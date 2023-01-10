@@ -1,9 +1,7 @@
 .container {
     height: 90%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
 }
 
 .window {
@@ -28,4 +26,11 @@
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+.projects-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

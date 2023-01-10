@@ -37,17 +37,7 @@ export class FolderComponent implements OnInit, Folder {
   }
 
   click() {
-    //this.window.active = true
     this.windowManagerService.setWindowState(this.window.id, true)
-  }
-
-  getFolder(): Folder {
-    return {
-      name: this.name,
-      files: this.files,
-      links: this.links,
-      subFolders: this.subFolders
-    }
   }
 
 }

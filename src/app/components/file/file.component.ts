@@ -11,7 +11,7 @@ import { Window } from 'src/app/models/Window';
 @Component({
   selector: 'app-file',
   templateUrl: './file.component.html',
-  styleUrls: ['./file.component.css',  '../../../assets/projects/project1.css']
+  styleUrls: ['./file.component.css']
 })
 export class FileComponent implements OnInit, File {
 

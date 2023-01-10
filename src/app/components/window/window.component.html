@@ -13,7 +13,9 @@
         (touchend)="setDraggingMobile(false, $event)"  
         (mousedown)="setDragging(true, $event)" 
         (mouseup)="setDragging(false, $event)">
-        <div *ngIf="isFolder && folder" id="tab-name">{{folder.name}}</div>
+        <div *ngIf="isFolder && folder" id="tab-name">
+           {{folder.name}}
+        </div>
         <div 
             id="close-button" 
             (touch)="close()"
