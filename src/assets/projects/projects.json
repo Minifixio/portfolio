@@ -101,8 +101,13 @@
             "subFolders": [],
             "files": [
                 {
-                    "name": "Sportify",
+                    "name": "Sportify v.1",
                     "fileContentID": 6,
+                    "parentFolder": null
+                },
+                {
+                    "name": "Sportify v.2",
+                    "fileContentID": 7,
                     "parentFolder": null
                 }
             ],
@@ -121,7 +126,7 @@
             "files": [
                 {
                     "name": "DOHM App",
-                    "fileContentID": 7,
+                    "fileContentID": 8,
                     "parentFolder": null
                 }
             ],
