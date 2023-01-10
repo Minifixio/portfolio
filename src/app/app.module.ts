@@ -19,6 +19,7 @@ import { FolderContentComponent } from './components/folder-content/folder-conte
 import { FileComponent } from './components/file/file.component';
 import { ProjectComponent } from './components/project/project.component';
 import { LinkComponent } from './components/link/link.component';
+import { NoSanitizePipe } from './pipes/no-sanitize.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LinkComponent } from './components/link/link.component';
     FolderContentComponent,
     FileComponent,
     ProjectComponent,
-    LinkComponent
+    LinkComponent,
+    NoSanitizePipe
   ],
   imports: [
     BrowserModule,

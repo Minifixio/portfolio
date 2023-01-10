@@ -70,7 +70,6 @@ export class WindowComponent implements OnInit {
     if (this.isResizing && !this.isDragging) {
       const newWidth = event.clientX - this.left - this.container.nativeElement.offsetLeft
       const newHeight = event.clientY - this.top - this.bounding.top
-      console.log(newWidth, newHeight, this.bounding.top)
       if (
         this.left + newWidth < this.bounding.right &&
         this.top + newHeight < this.bounding.bottom
@@ -124,10 +123,10 @@ export class WindowComponent implements OnInit {
     }
   }
 
-  @HostListener('document:click', ['$event']) 
-  onMouseClick(event: MouseEvent) {
-    console.log(event.clientX, event.clientY-65)
-  }
+  // @HostListener('document:click', ['$event']) 
+  // onMouseClick(event: MouseEvent) {
+  //   console.log(event.clientX, event.clientY-65)
+  // }
   
   constructor(
     private windowsManagerService: WindowsManagerService
@@ -142,8 +141,12 @@ export class WindowComponent implements OnInit {
     this.id = id
   }
 
-  getFileContent() {
-    return this.file?.getFileContentHTML()
+  getFileContent(): string {
+    if (this.file && this.file.getFileContentHTML() != undefined) {
+      return this.file.getFileContentHTML()
+    } else {
+      return ""
+    }
   }
 
   setSize() {
@@ -175,7 +178,6 @@ export class WindowComponent implements OnInit {
   }
 
   setDragging(state: boolean, event: MouseEvent) {
-    console.log(this.bounding)
     this.isDragging = state
     if (state == true) {
       this.dragFrom = {x: event.clientX, y: event.clientY, left: this.left, top: this.top}

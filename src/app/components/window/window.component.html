@@ -25,7 +25,7 @@
     </div>
 
     <div id="content-div" #contentDiv>
-        <div *ngIf="!isFolder" [innerHTML]="getFileContent()"></div>
+        <div *ngIf="!isFolder" [innerHTML]="getFileContent() | noSanitize"></div>
         <app-folder-content *ngIf="isFolder && folder" #folderContent [folder]="folder" class="folder-content"></app-folder-content>
     </div>
     

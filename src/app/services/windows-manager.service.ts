@@ -82,4 +82,9 @@ export class WindowsManagerService {
     this.currentWindows.map(window => {if(window.id === windowID) { window.active = state}})
     this.currentWindowsSubject.next(this.currentWindows)
   }
+
+  resetWindows() {
+    this.currentWindows = []
+    this.currentWindowsSubject = new BehaviorSubject(this.currentWindows)
+  }
 }

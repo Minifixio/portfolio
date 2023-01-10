@@ -39,6 +39,8 @@ export class ProjectsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log('Init projects')
+    this.windowManagerService.resetWindows()
     this.projects = (<any>projects.projects)
     this.windows$ = this.windowManagerService.getCurrentWindowsSubject().asObservable()
   }
