@@ -5,76 +5,62 @@ const project1: FileContent = {
    name: "project1",
    contentHTML: 
       `<div class="main">
-      <h1 id="biggest-circle-inscribed-in-a-polygon">Biggest Circle Inscribed In A Polygon</h1>
-      <p><em>A year project carried during my last year of &quot;Classe préparatoire&quot; meant to deal with Mathematics and Computer Science related topics.</em></p>
-      <h2 id="first-method--based-on-the-approximation-of-poles-of-inaccessibility">First method : based on the approximation of poles of inaccessibility</h2>
-      <p>The method follows <a href="https://arxiv.org/ftp/arxiv/papers/1212/1212.3193.pdf">this paper</a> which refers to <a href="https://www.researchgate.net/publication/232984998_Poles_of_inaccessibility_A_calculation_algorithm_for_the_remotest_places_on_Earth">this paper</a>.</p>
+      <h1 id="unlask">Unlask</h1>
+      <p><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_5.png?raw=true" alt=""> </p>
+      <p>An app that asks you questions every time you unlock your phone...</p>
+      <br>
+      <h2 id="background">Background</h2>
+      <p>The number of times we turn on our phone just to look at the screen or to unthinkingly consult social networks is countless...
+         Unlask&#39;s goal is to transform these little moments into smarter ones and to also, push you to reduce the use of your smartphone.
+         <br>
+      </p>
+      <h2 id="features">Features</h2>
+      <p>You can :</p>
+      <ul>
+         <li>Create unlimited question sets with text questions</li>
+         <li>Edit easily your question sets to add, remove and edit questions</li>
+         <li>Select time range during which the application will ask you questions</li>
+         <li>Disable or enable any question set</li>
+         <li>Disable the application or disable the notification</li>
+      </ul>
+      <br>
+      <h2 id="usage">Usage</h2>
+      <p>It is a <a href="https://ionicframework.com/">Ionic</a> app and it runs only on Android.
+         To run it, just run <code>ionic cordova platform add android</code> and then <code>ionic cordova run android</code>. 
+      </p>
+      <p>I edited the plugin <code>cordova-plugin-screenevents</code> in order to catch the device wake up event, all the others plugins are unchanged.</p>
+      <br>
+      <h2 id="visuals">Visuals</h2>
       <table>
          <thead>
             <tr>
-               <th align="center">Example of pole of inaccessibility</th>
-               <th align="center">The method of the paper</th>
+               <th align="center">The question page</th>
+               <th align="center">The question sets page</th>
             </tr>
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/poles_example.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/poles1.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_1.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_2.png?raw=true" alt=""></td>
             </tr>
          </tbody>
       </table>
       <br>
+      <table>
+         <thead>
+            <tr>
+               <th align="center">The preference page</th>
+               <th align="center">The set editing page</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_3.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_4.png?raw=true" alt=""></td>
+            </tr>
+         </tbody>
+      </table>
       <br>
-      <h2 id="second-method--using-the-medial-axis-approximation-of-a-polygon-using-voronoi-diagrams">Second method : using the medial axis approximation of a polygon using Voronoi diagrams</h2>
-      <p>The method follows <a href="https://link.springer.com/article/10.1007/BF01840357">this paper</a> by Steven Fortune.</p>
-      <table>
-         <thead>
-            <tr>
-               <th align="center">An example of our Fortune algorithm</th>
-               <th align="center">A first application to a polygon with an interior</th>
-               <th align="center">A second application to a polygon with an interior</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/fortune1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/app1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/app2.png?raw=true" alt=""></td>
-            </tr>
-         </tbody>
-      </table>
-      <table>
-         <thead>
-            <tr>
-               <th align="center">An approximation of the medial axis 1</th>
-               <th align="center">An approximation of the medial axis 2</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/medial1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/medial2.png?raw=true" alt=""></td>
-            </tr>
-         </tbody>
-      </table>
-      <h2 id="final-step--to-apply-theses-methods-to-a-real-map-bretagne">Final step : to apply theses methods to a real map (Bretagne)</h2>
-      <table>
-         <thead>
-            <tr>
-               <th align="center">The map used</th>
-               <th align="center">The algorithm applied in every county</th>
-               <th align="center">A zoom</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/bretagne1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/bretagne2.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/bretagne3.png?raw=true" alt=""></td>
-            </tr>
-         </tbody>
-      </table>
-      <p>You can found the slides describing the project <a href="https://github.com/Minifixio/TIPE_2021/blob/master/assets/Diapo_TIPE_export.pdf">here</a></p>
       </div>`
 }
 

@@ -41,16 +41,16 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.projects = (<any>projects.projects)
     this.windows$ = this.windowManagerService.getCurrentWindowsSubject().asObservable()
+  }
+
+  ngAfterViewInit() {
+    this.setBouding()
     this.windowManagerService.getCurrentWindowsSubject().asObservable().subscribe(val => {
       this.windows.toArray().forEach(window => {
         window.setPosition()
         window.setSize()
       })
     })
-  }
-
-  ngAfterViewInit() {
-    this.setBouding()
   }
 
   setBouding() {
