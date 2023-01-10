@@ -15,6 +15,8 @@ export class WindowsManagerService {
 
   currentWindowsSubject!: BehaviorSubject<Window[]>
 
+  bounding: Bounding = {top:0, bottom:0, right:0, left:0}
+
   constructor() { 
     this.currentWindowsSubject = new BehaviorSubject(this.currentWindows)
   }
@@ -35,7 +37,7 @@ export class WindowsManagerService {
       height: 0,
       top: 0,
       left: 0,
-      bounding: {top:0, bottom:0, right:0, left:0},
+      bounding: this.bounding,
       active: false,
       isFolder: false,
       file: file,
@@ -53,7 +55,7 @@ export class WindowsManagerService {
       height: 0,
       top: 0,
       left: 0,
-      bounding: {top:0, bottom:0, right:0, left:0},
+      bounding: this.bounding,
       active: false,
       isFolder: true,
       file: undefined,
@@ -65,7 +67,7 @@ export class WindowsManagerService {
   }
 
   setWindowsBounding(bounding: Bounding) {
-    console.log('Setting bounding', bounding)
+    this.bounding = bounding
     this.currentWindows.forEach(window => {
       window.bounding = bounding
     })

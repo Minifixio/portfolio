@@ -5,5 +5,5 @@ export interface File {
     name: string
     fileContentID: number
     parentFolder: Folder
-    getFileContent: () => FileContent | undefined
+    getFileContentHTML: () => string | undefined
 }

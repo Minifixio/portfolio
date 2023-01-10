@@ -4,6 +4,7 @@ import { Bounding } from 'src/app/models/Bounding';
 import { File } from 'src/app/models/File';
 import { Folder } from 'src/app/models/Folder';
 import { Window } from 'src/app/models/Window';
+import { WindowsManagerService } from 'src/app/services/windows-manager.service';
 import { FolderContentComponent } from '../folder-content/folder-content.component';
 
 interface Drag {
@@ -20,6 +21,9 @@ interface Drag {
   encapsulation: ViewEncapsulation.None
 })
 export class WindowComponent implements OnInit {
+
+  @Input('id')
+  id!: number
 
   @Input('width')
   width!: number
@@ -57,7 +61,6 @@ export class WindowComponent implements OnInit {
   @ViewChild("contentDiv")
   contentDiv!: ElementRef
 
-  id!: number
   isResizing: boolean = false
   isDragging: boolean = false
   dragFrom = {} as Drag
@@ -126,27 +129,13 @@ export class WindowComponent implements OnInit {
     console.log(event.clientX, event.clientY-65)
   }
   
-  constructor() { }
+  constructor(
+    private windowsManagerService: WindowsManagerService
+  ) { }
 
   ngOnInit(): void {
     this.setSize()
     this.setPosition()
-  }
-
-  getWindow() {
-    const res: Window = {
-      id: this.id,
-      width: this.width,
-      height: this.height,
-      left: this.left,
-      bounding: this.bounding,
-      top: this.top,
-      active: this.active,
-      isFolder: this.isFolder,
-      file: this.file,
-      folder: this.folder,
-    }
-    return res
   }
 
   setWindowID(id: number) {
@@ -154,7 +143,7 @@ export class WindowComponent implements OnInit {
   }
 
   getFileContent() {
-    return this.file?.getFileContent()
+    return this.file?.getFileContentHTML()
   }
 
   setSize() {
@@ -166,7 +155,7 @@ export class WindowComponent implements OnInit {
         this.width = (this.bounding.right - this.bounding.left)*0.9
         this.height = (this.bounding.bottom - this.bounding.top)*0.9
       }
-    }, 500)
+    }, 0)
   }
 
   setPosition() {
@@ -178,7 +167,7 @@ export class WindowComponent implements OnInit {
         this.top = (this.bounding.bottom - this.bounding.top)*0.05
         this.left = (this.bounding.right - this.bounding.left)*0.1 * 1/2
       }
-    }, 500)
+    }, 0)
   }
 
   setResize(state: boolean) {
@@ -200,17 +189,9 @@ export class WindowComponent implements OnInit {
     }
   }
 
-  // setBounding(bounding: Bounding) {
-  //   this.bounding = bounding;
-  //   if (this.isFolder) {
-  //     this.folderContent.setBounding(bounding)
-  //   } else {
-  //     console.log(bounding)
-  //   }
-  // }
-
   close() {
     this.active = false
+    this.windowsManagerService.setWindowState(this.id, false)
   }
 
 }

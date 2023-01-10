@@ -12,6 +12,7 @@
 
     <app-window *ngFor="let window of windows$ | async"
         class="window"
+        [id]="window.id"
         [width]="window.width" 
         [height]="window.height" 
         [left]="window.left" 

@@ -24,9 +24,6 @@ export class FileComponent implements OnInit, File {
   @Input('parentFolder')
   parentFolder!: Folder;
 
-  @Input('bounding')
-  bounding!: Bounding
-
   contentInnerHTML!: string | undefined
   window!: Window
 
@@ -36,7 +33,7 @@ export class FileComponent implements OnInit, File {
   ) { }
 
   ngOnInit(): void {
-    this.contentInnerHTML = this.filesService.getFileContent(this.fileContentID)?.content
+    this.contentInnerHTML = this.filesService.getFileContentHTML(this.fileContentID)
     this.window = this.windowManagerService.addFileWindow(this)
   }
 
@@ -44,12 +41,11 @@ export class FileComponent implements OnInit, File {
     return this
   }
 
-  getFileContent() {
-    return this.filesService.getFileContent(this.fileContentID)
+  getFileContentHTML() {
+    return this.filesService.getFileContentHTML(this.fileContentID)
   }
 
   click() {
-    //this.window.active = true
     this.windowManagerService.setWindowState(this.window.id, true)
   }
 

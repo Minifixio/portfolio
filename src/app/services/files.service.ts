@@ -9,7 +9,7 @@ export class FilesService {
 
   constructor() { }
 
-  getFileContent(fileID: number): FileContent | undefined {
-    return files.find(file => file.id === fileID)
+  getFileContentHTML(fileID: number): string | undefined {
+    return files.find(file => file.id === fileID)?.contentHTML
   }
 }
