@@ -22,7 +22,7 @@ export class LinkComponent implements OnInit {
   }
 
   click() {
-    
+    window.open(this.link)
   }
 
 }

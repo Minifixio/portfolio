@@ -35,6 +35,11 @@
                     "name": "GitHub",
                     "link": "https://github.com/Minifixio/blackboard-collab-bot",
                     "iconName": "github"
+                },
+                {
+                    "name": "How it works",
+                    "link": "https://www.youtube.com/watch?v=9wo8dPhXbG8",
+                    "iconName": "youtube"
                 }
             ]
         },
@@ -54,6 +59,11 @@
                     "name": "GitHub",
                     "link": "https://github.com/Minifixio/Highlit",
                     "iconName": "github"
+                },
+                {
+                    "name": "App preview",
+                    "link": "https://www.youtube.com/watch?v=JRLpymSlAX4",
+                    "iconName": "youtube"
                 }
             ]
         },
@@ -116,6 +126,11 @@
                     "name": "GitHub",
                     "link": "https://github.com/Minifixio/Sportify",
                     "iconName": "github"
+                },
+                {
+                    "name": "Video (in french)",
+                    "link": "https://www.youtube.com/watch?v=Iybsk5PmKsU",
+                    "iconName": "youtube"
                 }
             ]
         },
