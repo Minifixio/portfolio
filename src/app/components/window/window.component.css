@@ -60,6 +60,7 @@
     overflow: scroll;
     background-color: #f7f7f7;
     display: flex;
+    justify-content: center;
 }
 
 #tab-name {
