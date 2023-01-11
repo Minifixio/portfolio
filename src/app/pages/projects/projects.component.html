@@ -1,4 +1,10 @@
 <div #container class="container">
+
+    <div id="info-div">
+        <p>Here are my projects sorted in <b>folders</b>.</p>
+        <p><b>Click</b> on a folder to learn more about a project</p>
+    </div>
+
     <div class="projects-container">
         <div class="project-div" *ngFor="let project of projects; let id=index;">
             <app-folder
@@ -28,4 +34,5 @@
         [folder]="window.folder"
         [file]="window.file">
     </app-window>
+
 </div>

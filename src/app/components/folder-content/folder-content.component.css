@@ -1,6 +1,7 @@
 .folder-content-div {
     display: flex;
     padding: 10px;
-    width: fit-content;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 70vw;
 }
