@@ -1,18 +1,10 @@
 .container {
-    height: 90%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.window {
-    position: absolute;
-    z-index: 2;
-    visibility: hidden;
-    top:64px;
-    right: 0;
-    width: 100%;
+    justify-content: center;
+    overflow: auto;
     height: 100%;
 }
 
@@ -31,10 +23,14 @@
 }
 
 .projects-container {
-    width: 100%;
+    width: 90%;
+    height: 80%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    overflow: auto;
+    margin-bottom: 20px;
+    align-content: flex-start;
 }
 
 #info-div {
@@ -53,4 +49,51 @@
 b {
     font-weight: bolder;
     font-size: 15px;
+}
+
+
+#home-page-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#intro-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-img {
+    height: 20vh;
+}
+
+#intro-text-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#desc-div {
+    line-height: 18px;
+}
+
+#info-folders-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#info-folders-div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+#info-folders-cursor-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
 }
