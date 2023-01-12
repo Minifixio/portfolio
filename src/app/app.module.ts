@@ -20,6 +20,7 @@ import { FileComponent } from './components/file/file.component';
 import { ProjectComponent } from './components/project/project.component';
 import { LinkComponent } from './components/link/link.component';
 import { NoSanitizePipe } from './pipes/no-sanitize.pipe';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NoSanitizePipe } from './pipes/no-sanitize.pipe';
     FileComponent,
     ProjectComponent,
     LinkComponent,
-    NoSanitizePipe
+    NoSanitizePipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

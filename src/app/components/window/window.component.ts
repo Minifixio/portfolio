@@ -6,6 +6,13 @@ import { Folder } from 'src/app/models/Folder';
 import { Window } from 'src/app/models/Window';
 import { WindowsManagerService } from 'src/app/services/windows-manager.service';
 import { FolderContentComponent } from '../folder-content/folder-content.component';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 interface Drag {
   x: number
@@ -16,6 +23,24 @@ interface Drag {
 
 @Component({
   selector: 'app-window',
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+        opacity: 1,
+        visibility: 'visible'
+      })),
+      state('closed', style({
+        opacity: 0,
+        visibility: 'hidden'
+      })),
+      transition('open => closed', [
+        animate('0.2s')
+      ]),
+      transition('closed => open', [
+        animate('0.2s')
+      ]),
+    ]),
+  ],
   templateUrl: './window.component.html',
   styleUrls: ['./window.component.css', '../../../assets/projects/projects.css'],
   encapsulation: ViewEncapsulation.None

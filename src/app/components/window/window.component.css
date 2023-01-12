@@ -4,6 +4,8 @@
     transition: opacity .3s;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    opacity: 1;
+    visibility: visible;
 }
 
 #resize-tool {
