@@ -12,4 +12,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  click(link: string) {
+    window.open(link)
+  }
 }

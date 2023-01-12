@@ -1,0 +1,46 @@
+#about-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+#about-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-img {
+    height: 20vh;
+}
+
+#about-text-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#desc-div {
+    line-height: 18px;
+}
+
+#socials-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#socials-div > svg {
+    display: flex;
+    margin: 10px;
+    transition: transform .2s ease-in-out; 
+}
+
+#socials-div > svg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

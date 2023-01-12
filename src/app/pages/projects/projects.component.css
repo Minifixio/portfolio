@@ -30,6 +30,8 @@
     overflow: auto;
     margin-bottom: 20px;
     align-content: flex-start;
+    min-width: 60vw;
+    max-width: 30vw;
 }
 
 #info-div {
