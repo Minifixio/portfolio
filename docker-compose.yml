@@ -1,0 +1,17 @@
+
+version: '3'
+
+services:
+  portfolio:
+    image: $PORTFOLIO_IMAGE
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio-website.rule=Host(`$PORTFOLIO_DNS`)"
+      - "traefik.http.services.portfolio-website.loadbalancer.server.port=80"
+    networks:
+      - pic
+    restart: "always"
+
+networks:
+    pic:
+        external: true
