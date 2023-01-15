@@ -2,7 +2,7 @@ import { FileContent } from "src/app/models/FileContent";
 
 const project4: FileContent = {
    id: 4,
-   name: "project1",
+   name: "project4",
    contentHTML: 
       `<div class="main">
       <h1 id="biggest-circle-inscribed-in-a-polygon">Biggest Circle Inscribed In A Polygon</h1>

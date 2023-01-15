@@ -179,10 +179,10 @@ export class WindowComponent implements OnInit {
       if (this.isFolder) {
         //this.width = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetWidth
         this.width = (this.bounding.right - this.bounding.left)*0.6
-        this.height = (this.bounding.bottom - this.bounding.top)*0.5
+        this.height = (this.bounding.bottom - this.bounding.top)*0.4
       } else {
         this.width = (this.bounding.right - this.bounding.left)*0.9
-        this.height = (this.bounding.bottom - this.bounding.top)*0.8
+        this.height = (this.bounding.bottom - this.bounding.top)*0.75
       }
     }, 0)
   }
@@ -190,11 +190,11 @@ export class WindowComponent implements OnInit {
   setPosition() {
     setTimeout(() => {
       if (this.isFolder) {
-        this.top = (this.bounding.bottom - this.bounding.top)*0.05
+        this.top = (this.bounding.bottom - this.bounding.top)*0.02
         //this.left = (this.bounding.right - this.bounding.left - this.contentDiv.nativeElement.childNodes[1].firstChild.offsetWidth) * 1/2
         this.left = (this.bounding.right - this.bounding.left)*0.4* 1/2
       } else {
-        this.top = (this.bounding.bottom - this.bounding.top)*0.05
+        this.top = (this.bounding.bottom - this.bounding.top)*0.02
         this.left = (this.bounding.right - this.bounding.left)*0.1 * 1/2
       }
     }, 0)
