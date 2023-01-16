@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  githubLink = "https://github.com/Minifixio"
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clickGithub() {
+    window.open(this.githubLink)
   }
 
 }
