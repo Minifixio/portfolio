@@ -15,7 +15,7 @@ export class WindowsManagerService {
 
   currentWindowsSubject!: BehaviorSubject<Window[]>
 
-  bounding: Bounding = {top:0, bottom:0, right:0, left:0}
+  bounding: Bounding = {top:0, bottom:0, right:0, left:0, width:0, height:0}
 
   constructor() { 
     this.currentWindowsSubject = new BehaviorSubject(this.currentWindows)
@@ -80,7 +80,11 @@ export class WindowsManagerService {
 
   setWindowState(windowID: number, state: boolean) {
     this.currentWindows.map(window => {if(window.id === windowID) { window.active = state}})
-    this.currentWindowsSubject.next(this.currentWindows)
+
+    //Timeout because the closing animation takes 0,2s to run
+    setTimeout(() => {
+      this.currentWindowsSubject.next(this.currentWindows)
+    }, 200)
   }
 
   resetWindows() {

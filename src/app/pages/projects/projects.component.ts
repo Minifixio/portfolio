@@ -61,7 +61,9 @@ export class ProjectsComponent implements OnInit {
       top: boudingContainer.top,
       right: boudingContainer.right,
       bottom: boudingContainer.bottom,
-      left: boudingContainer.left
+      left: boudingContainer.left,
+      width: boudingContainer.width,
+      height: boudingContainer.height
     }
     this.windowManagerService.setWindowsBounding(bounding)
   }
