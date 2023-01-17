@@ -79,12 +79,17 @@ export class WindowsManagerService {
   }
 
   setWindowState(windowID: number, state: boolean) {
-    this.currentWindows.map(window => {if(window.id === windowID) { window.active = state}})
+    this.currentWindows.map(window => {if(window.id === windowID) { 
+      window.active = state
+      if (state) {
+        window.height = 0
+      }
+    }})
 
     //Timeout because the closing animation takes 0,2s to run
     setTimeout(() => {
       this.currentWindowsSubject.next(this.currentWindows)
-    }, 200)
+    }, state ? 0 : 1000)
   }
 
   resetWindows() {

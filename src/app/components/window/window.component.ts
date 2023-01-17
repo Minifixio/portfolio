@@ -31,13 +31,13 @@ interface Drag {
       })),
       state('closed', style({
         opacity: 0,
-        visibility: 'hidden'
+        visibility: 'hidden',
       })),
       transition('open => closed', [
-        animate('0.2s')
+        animate('0.9s')
       ]),
       transition('closed => open', [
-        animate('0.2s')
+        animate('0.9s')
       ]),
     ]),
   ],
@@ -94,7 +94,6 @@ export class WindowComponent implements OnInit {
 
   @HostListener('document:mousemove', ['$event']) 
   onMouseMove(event: MouseEvent) {
-    console.log(this.isDragging)
     if (this.isResizing && !this.isDragging) {
       const newWidth = event.clientX - this.left - this.container.nativeElement.offsetLeft
       const newHeight = event.clientY - this.top - this.bounding.top
@@ -150,19 +149,21 @@ export class WindowComponent implements OnInit {
 
     }
   }
-
-  // @HostListener('document:click', ['$event']) 
-  // onMouseClick(event: MouseEvent) {
-  //   console.log(event.clientX, event.clientY-65)
-  // }
   
   constructor(
     private windowsManagerService: WindowsManagerService
   ) { }
 
   ngOnInit(): void {
-    this.setSize()
-    this.setPosition()
+    this.stateChanged()
+  }
+
+  stateChanged() {
+    this.height = 0
+    if (this.active) {
+      this.setPosition()
+      this.setSize()
+    }
   }
 
   setWindowID(id: number) {
@@ -178,19 +179,21 @@ export class WindowComponent implements OnInit {
   }
 
   setSize() {
+
     setTimeout(() => {
       if (this.fullScreen) {
         this.setMaximizeSize()
       } else {
         if (this.isFolder) {
-          //this.width = this.contentDiv.nativeElement.childNodes[1].firstChild.offsetWidth
+          //this.height = this.contentDiv.nativeElement.childNodes[1].offsetHeight + 20
           this.width = (this.bounding.right - this.bounding.left)*0.6
-          this.height = (this.bounding.bottom - this.bounding.top)*0.4
+          this.height = (this.bounding.bottom - this.bounding.top)*0.5
         } else {
           this.width = (this.bounding.right - this.bounding.left)*0.9
           this.height = (this.bounding.bottom - this.bounding.top)*0.75
         }
       }
+
     }, 0)
   }
 
@@ -229,6 +232,7 @@ export class WindowComponent implements OnInit {
   }
 
   close() {
+    this.height = 20
     this.windowsManagerService.setWindowState(this.id, false)
   }
 
@@ -239,7 +243,7 @@ export class WindowComponent implements OnInit {
 
   setMaximizeSize() {
     this.width = this.bounding.width-20
-    this.height = this.bounding.height*0.85
+    this.height = this.bounding.height*0.83
   }
 
   maximize() {

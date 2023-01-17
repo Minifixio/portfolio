@@ -49,8 +49,7 @@ export class ProjectsComponent implements OnInit {
     this.setBouding()
     this.windowManagerService.getCurrentWindowsSubject().asObservable().subscribe(val => {
       this.windows.toArray().forEach(window => {
-        window.setPosition()
-        window.setSize()
+        window.stateChanged()
       })
     })
   }
