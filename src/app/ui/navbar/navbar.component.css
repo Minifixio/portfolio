@@ -15,11 +15,12 @@
 
 #github-svg {
     width: 40px;
+    height: 100%;
     filter: invert(100%);
     transition: transform .2s ease-in-out; 
 }
 
-#github-svg:hover{
+#github-svg:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
