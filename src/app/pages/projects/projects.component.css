@@ -57,7 +57,7 @@ b {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin-bottom: 20px;
 }
 
@@ -97,4 +97,5 @@ b {
     display: flex;
     flex-direction: column;
     margin-left: 5%;
+    justify-content: center;
 }
