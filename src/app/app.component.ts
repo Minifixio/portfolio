@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'my-portfolio';
+
+  constructor(private metatagService: Meta) {}
+
+  ngOnInit(): void {
+    this.metatagService.addTags([
+      {name: 'keywords', content: 'Emile Le Gallic, Portfolio'},
+      {name: 'author', content: 'Emile Le Gallic'}
+    ])
+  }
 }

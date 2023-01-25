@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private metatagService: Meta) { }
 
   ngOnInit(): void {
+    this.metatagService.updateTag({name: 'description', content: 'Emile Le Gallic portfolio homepage'})
   }
 
   click(link: string) {
