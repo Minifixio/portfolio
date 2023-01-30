@@ -34,10 +34,10 @@ interface Drag {
         visibility: 'hidden',
       })),
       transition('open => closed', [
-        animate('0.9s')
+        animate('0.3s')
       ]),
       transition('closed => open', [
-        animate('0.9s')
+        animate('0.3s')
       ]),
     ]),
   ],
