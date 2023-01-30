@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://emile.le-gallic.com/sitemap.xml
