@@ -21,24 +21,24 @@ const project8: FileContent = {
       <table>
          <thead>
             <tr>
-               <th align="center"><img class="image" src="https://github.com/Minifixio/dhom-app/blob/master/screenshots/main_page.jpg?raw=true" alt="The main page"></th>
-               <th align="center"><img class="image" src="https://github.com/Minifixio/dhom-app/blob/master/screenshots/adding_machine_page.jpg?raw=true" alt="The adding page"></th>
+               <th align="center"><img class="image" src="/assets/images/project8/main_page.webp" alt="The main page"></th>
+               <th align="center"><img class="image" src="/assets/images/project8/adding_machine_page.webp" alt="The adding page"></th>
             </tr>
          </thead>
       </table>
       <table>
          <thead>
             <tr>
-               <th align="center"><img class="image" src="https://github.com/Minifixio/dhom-app/blob/master/screenshots/washing_machine_page.jpg?raw=true" alt="The washing machine page"></th>
-               <th align="center"><img class="image" src="https://github.com/Minifixio/dhom-app/blob/master/screenshots/profiles.jpg?raw=true" alt="The profile selection page"></th>
+               <th align="center"><img class="image" src="/assets/images/project8/washing_machine_page.webp" alt="The washing machine page"></th>
+               <th align="center"><img class="image" src="/assets/images/project8/profiles.webp" alt="The profile selection page"></th>
             </tr>
          </thead>
       </table>
       <table>
          <thead>
             <tr>
-               <th align="center"><img class="image" src="https://github.com/Minifixio/dhom-app/blob/master/screenshots/joining_machine.jpg?raw=true" alt="Joining a washing machine"></th>
-               <th align="center"><img class="image" src="https://github.com/Minifixio/dhom-app/blob/master/screenshots/loading_page.jpg?raw=true" alt="The loading page"></th>
+               <th align="center"><img class="image" src="/assets/images/project8/joining_machine.webp" alt="Joining a washing machine"></th>
+               <th align="center"><img class="image" src="/assets/images/project8/loading_page.webp" alt="The loading page"></th>
             </tr>
          </thead>
       </table>

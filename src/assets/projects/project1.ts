@@ -6,7 +6,7 @@ const project1: FileContent = {
    contentHTML: 
       `<div class="main">
       <h1 id="unlask">Unlask</h1>
-      <p><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_5.png?raw=true" alt=""> </p>
+      <p><img class="image" src="/assets/images/project1/preview_5.webp" alt=""> </p>
       <p>An app that asks you questions every time you unlock your phone...</p>
       <br>
       <h2 id="background">Background</h2>
@@ -40,8 +40,8 @@ const project1: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_2.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project1/preview_1.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project1/preview_2.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
@@ -55,8 +55,8 @@ const project1: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_3.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/unlask-app/blob/master/.screenshots/preview_4.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project1/preview_3.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project1/preview_4.webp" alt=""></td>
             </tr>
          </tbody>
       </table>

@@ -19,8 +19,8 @@ const project2: FileContent = {
       <table>
          <thead>
             <tr>
-               <th align="center"><img class="image-bigger" src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/bot_connected.png?raw=true"></th>
-               <th align="center"><img class="image-bigger" src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/loutre_drawing.png?raw=true"></th>
+               <th align="center"><img class="image-bigger" src="/assets/images/project2/bot_connected.webp"></th>
+               <th align="center"><img class="image-bigger" src="/assets/images/project2/loutre_drawing.webp"></th>
             </tr>
          </thead>
       </table>
@@ -47,7 +47,7 @@ const project2: FileContent = {
          Then you need to bind <strong>your sound output directly to your microphone input</strong> such as a loop. 
       </p>
       <p>Here is the <em>workflow diagram</em> :</p>
-      <p><img class="image" src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/sound_workflow.png?raw=true" alt="Workflow explanation"></p>
+      <p><img class="image" src="/assets/images/project2/sound_workflow.webp" alt="Workflow explanation"></p>
       <p><br/><br/>
          To redirect the sound output to both your own user&#39;s audio output and mic input, you can use multi-output devices. 
          Here is an <a href="https://support.apple.com/guide/audio-midi-setup/ams7c093f372/mac">example</a> on MacOS<br/><br/>
@@ -82,10 +82,10 @@ const project2: FileContent = {
          <tbody>
             <tr>
                <td align="center">
-                  <img class="image-bigger"  src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/bot_connecting.png?raw=true" alt="The Thug drawing">
+                  <img class="image-bigger"  src="/assets/images/project2/bot_connecting.webp" alt="The Thug drawing">
                </td>
                <td align="center">
-                  <img class="image-bigger"  src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/bot_connecting.png?raw=true" alt="The drawings panel">
+                  <img class="image-bigger"  src="/assets/images/project2/bot_connecting.webp" alt="The drawings panel">
                </td>
             </tr>
          </tbody>
@@ -150,10 +150,10 @@ const project2: FileContent = {
          <tbody>
             <tr>
                <td align="center">
-                  <img class="image-bigger"  src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/soundboard.png?raw=true" alt="The Thug drawing">
+                  <img class="image-bigger"  src="/assets/images/project2/soundboard.webp" alt="The Thug drawing">
                </td>
                <td align="center">
-                  <img class="image-bigger" src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/drawings.png?raw=true" alt="The drawings panel">
+                  <img class="image-bigger" src="/assets/images/project2/drawings.webp" alt="The drawings panel">
                </td>
             </tr>
          </tbody>
@@ -172,7 +172,7 @@ const project2: FileContent = {
          <tbody>
             <tr>
                <td align="center">
-                  <img class="image-bigger"  src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/bot_setup_page.png?raw=true" alt="The Thug drawing">
+                  <img class="image-bigger"  src="/assets/images/project2/bot_setup_page.webp" alt="The Thug drawing">
                </td>
             </tr>
          </tbody>
@@ -190,10 +190,10 @@ const project2: FileContent = {
          <tbody>
             <tr>
                <td align="center">
-                  <img class="image-bigger"  src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/thug_drawing.png?raw=true" alt="The Thug drawing">
+                  <img class="image-bigger"  src="/assets/images/project2/thug_drawing.webp" alt="The Thug drawing">
                </td>
                <td align="center">
-                  <img class="image-bigger"  src="https://github.com/Minifixio/blackboard-collab-bot/blob/master/.screenshots/lol_face_drawing.png?raw=true" alt="The lolface drawing">
+                  <img class="image-bigger"  src="/assets/images/project2/lol_face_drawing.webp" alt="The lolface drawing">
                </td>
             </tr>
          </tbody>

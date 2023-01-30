@@ -18,8 +18,8 @@ const project4: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/poles_example.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/poles1.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/poles_example.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/poles1.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
@@ -37,9 +37,9 @@ const project4: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/fortune1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/app1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/app2.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/fortune1.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/app1.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/app2.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
@@ -52,8 +52,8 @@ const project4: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/medial1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/medial2.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/medial1.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/medial2.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
@@ -68,13 +68,13 @@ const project4: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/bretagne1.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/bretagne2.png?raw=true" alt=""></td>
-               <td align="center"><img class="image" src="https://github.com/Minifixio/TIPE_2021/blob/master/assets/bretagne3.png?raw=true" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/bretagne1.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/bretagne2.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project4/bretagne3.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
-      <p>You can found the slides describing the project <a href="https://github.com/Minifixio/TIPE_2021/blob/master/assets/Diapo_TIPE_export.pdf">here</a></p>
+      <p>You can found the slides describing the project <a href="/assets/images/project4/Diapo_TIPE_export.pdf">here</a></p>
       </div>`
 }
 

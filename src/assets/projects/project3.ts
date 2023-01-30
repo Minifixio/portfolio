@@ -5,7 +5,7 @@ const project3: FileContent = {
    name: "project3",
    contentHTML: 
       `<div class="main">
-      <p><img class="image-bigger" src="https://i.imgur.com/JUwk1w8.png" alt="Highlit"></p>
+      <p><img class="image-bigger" src="/assets/images/project3/logo.webp" alt="Highlit"></p>
       <h1 id="highlit--whats-is-it-">Highlit ? Whats is it ?</h1>
       <p><strong><a href="https://highlit.me">HIGHLIT.ME</a></strong> (<strong>currently unavailable</strong>) is an <strong>open sourced</strong> web application running under Angular which allows you to easily rewatch <strong>Counter-Strike Global Offensive</strong> esport matches when you missed them live. <br>
          Match highlights videos are often quite long. Highlit offers a visual and interactive timeline of the match and let you navigate through the best moments of the match and access to them quickly.
@@ -22,7 +22,7 @@ const project3: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image-bigger"  src="https://github.com/Minifixio/Highlit/blob/master/screenshots/menu.png?raw=true" alt=""></td>
+               <td align="center"><img class="image-bigger"  src="/assets/images/project3/menu.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
@@ -37,14 +37,14 @@ const project3: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image-bigger"  src="https://github.com/Minifixio/Highlit/blob/master/screenshots/match1.png?raw=true" alt=""></td>
+               <td align="center"><img class="image-bigger"  src="/assets/images/project3/match1.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
       <table>
          <thead>
             <tr>
-               <th align="center"><img class="image-bigger"  src="https://github.com/Minifixio/Highlit/blob/master/screenshots/match1.png?raw=true" alt=""></th>
+               <th align="center"><img class="image-bigger"  src="/assets/images/project3/match1.webp" alt=""></th>
             </tr>
          </thead>
       </table>

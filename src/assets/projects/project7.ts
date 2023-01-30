@@ -58,7 +58,7 @@ const project7: FileContent = {
       <p>Any suggestions are highly appreciated :) </p>
       <br>
       <h2 id="some-pictures-of-the-app">Some pictures of the app</h2>
-      <p><img src="https://i.imgur.com/u2MsIUJ.jpg" width="250"> <img src="https://i.imgur.com/KrzO0qK.jpg" width="250"> <img src="https://i.imgur.com/3oRcYrb.jpg" width="250"></p>
+      <p><img src="/assets/images/project7/preview1.webp" width="250"> <img src="/assets/images/project7/preview1.webp" width="250"> <img src="/assets/images/project7/preview1.webp" width="250"></p>
       </div>`
 }
 

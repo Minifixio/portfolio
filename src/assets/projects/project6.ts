@@ -26,10 +26,10 @@ const project6: FileContent = {
       <p><b>OTHER USAGE :</b> Now, you can simply download the <i>/cordova_app</i> folder and then run the command <code>cordova platform add android</code> and then <code>cordova run android --device</code> to start the app on your Android device !</p>
       <h1 id="images-of-the-project">Images of the project</h1>
       <h2 id="the-flora-v3-and-the-bluefruit-le">The Flora V3 and the Bluefruit LE</h2>
-      <img class="image-bigger" src="https://i.imgur.com/gCRwqlX.jpg" width="500">
+      <img class="image-bigger" src="/assets/images/project6/preview1.webp" width="500">
       <br/>
       <h2 id="the-pulse-sensor">The Pulse Sensor</h2>
-      <img class="image-bigger" src="https://i.imgur.com/q1YlhTh.jpg" width="500">
+      <img class="image-bigger" src="/assets/images/project6/preview2.webp" width="500">
       <br/>
       <h2 id="application-preview">Application preview</h2>
       <table>
@@ -41,8 +41,8 @@ const project6: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://i.imgur.com/3JqUK6z.jpg" alt=""></td>
-               <td align="center"><img class="image" src="https://i.imgur.com/m1K8HcI.jpg" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project6/preview3.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project6/preview4.webp" alt=""></td>
             </tr>
          </tbody>
       </table>
@@ -55,8 +55,8 @@ const project6: FileContent = {
          </thead>
          <tbody>
             <tr>
-               <td align="center"><img class="image" src="https://i.imgur.com/liSFfLh.jpg" alt=""></td>
-               <td align="center"><img class="image" src="https://i.imgur.com/WXXgMQi.jpg"" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project6/preview5.webp" alt=""></td>
+               <td align="center"><img class="image" src="/assets/images/project6/preview6.webp"" alt=""></td>
             </tr>
          </tbody>
       </table>
