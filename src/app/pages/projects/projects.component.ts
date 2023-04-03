@@ -8,7 +8,7 @@ import { FolderComponent } from 'src/app/components/folder/folder.component';
 import { WindowsManagerService } from 'src/app/services/windows-manager.service';
 import { Observable } from 'rxjs';
 import { WindowComponent } from 'src/app/components/window/window.component';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -37,15 +37,18 @@ export class ProjectsComponent implements OnInit {
 
   constructor(
     private windowManagerService: WindowsManagerService,
-    private metatagService: Meta
+    private meta: Meta,
+    private title: Title
   ) { }
 
   ngOnInit(): void {
     console.log('Init projects')
-    this.metatagService.updateTag({name: 'description', content: 'Emile Le Gallic portfolio homepage'})
     this.windowManagerService.resetWindows()
     this.projects = (<any>projects.projects)
     this.windows$ = this.windowManagerService.getCurrentWindowsSubject().asObservable()
+
+    this.meta.updateTag({name: 'keywords', content: 'Emile Le Gallic, Portfolio, Home'})
+    this.title.setTitle('Emile Le Gallic - Portfolio')
   }
 
   ngAfterViewInit() {
