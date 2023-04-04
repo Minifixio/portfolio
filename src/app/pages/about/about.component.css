@@ -54,3 +54,14 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
+#socials-div > a > svg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#socials-div > a > svg {
+    display: flex;
+    margin: 10px;
+    transition: transform .2s ease-in-out; 
+}
