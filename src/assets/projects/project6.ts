@@ -8,7 +8,7 @@ const project6: FileContent = {
       <h1 id="sportify-app">Sportify App</h1>
       <h2 id="new-version-here--httpsgithubcomminifixiosportify_ionic"><strong>New version here : <a href="https://github.com/Minifixio/sportify_ionic">https://github.com/Minifixio/sportify_ionic</a></strong><br></h2>
       <p>A Cordova application that adjust your music to your heartbeat.</p>
-      <p>The application works with an Arduino assembly with a Flora V3, a Bluefruit LE (for the bluetooth communication) and a Pulse Sensor from <a href="pulsesensor.com">pulsesensor.com</a>.</p>
+      <p>The application works with an Arduino assembly with a Flora V3, a Bluefruit LE (for the bluetooth communication) and a Pulse Sensor from <a href="https://pulsesensor.com">pulsesensor.com</a>.</p>
       <p>The video explaining the project (in french) : <a href="https://youtu.be/Iybsk5PmKsU">Sportify</a></p>
       <h2 id="want-to-try-it-">Want to try it ?</h2>
       <p>First you need to setup a Cordova application. Find more informations here : <a href="https://cordova.apache.org/">Apache Cordova</a></p>
