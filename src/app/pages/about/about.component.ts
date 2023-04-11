@@ -14,8 +14,15 @@ export class AboutComponent implements OnInit {
   ) { } 
 
   ngOnInit(): void {
-    this.meta.updateTag({name: 'keywords', content: 'Emile Le Gallic, Portfolio, About'})
     this.title.setTitle('Emile Le Gallic - About')
+    this.meta.updateTag(
+      {name: 'keywords', content: 'Emile Le Gallic, Portfolio, About'}, 
+      'name=keywords'
+    )
+    this.meta.updateTag(
+      {name: 'description', content: "Find more about my socials, my skills, my education and my hobbies!"},
+      'name=description'
+    )
   }
 
   click(link: string) {

@@ -47,7 +47,14 @@ export class ProjectsComponent implements OnInit {
     this.projects = (<any>projects.projects)
     this.windows$ = this.windowManagerService.getCurrentWindowsSubject().asObservable()
 
-    this.meta.updateTag({name: 'keywords', content: 'Emile Le Gallic, Portfolio, Home'})
+    this.meta.updateTag(
+      {name: 'keywords', content: 'Emile Le Gallic, Portfolio, Home'}, 
+      'name=keywords'
+    )
+    this.meta.updateTag(
+      {name: 'description', content: "Hi I\'m Emile Le Gallic, a computer science student at Télécom Paris, and this is my portfolio!"},
+      'name=description'
+    )
     this.title.setTitle('Emile Le Gallic - Portfolio')
   }
 
