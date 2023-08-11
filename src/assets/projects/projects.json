@@ -152,6 +152,30 @@
                     "iconName": "github"
                 }
             ]
+        },
+        {
+            "name": "Paris catacombs visit",
+            "description": "A webapp to visit our own scans of the Paris catacombs carried out with an iPhone 14 Pro LiDAR",
+            "subFolders": [],
+            "files": [
+                {
+                    "name": "Project details",
+                    "fileContentID": 9,
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "Website",
+                    "link": "https://emile.le-gallic.com/catacombs/",
+                    "iconName": "website"
+                },
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/dhom-app",
+                    "iconName": "github"
+                }
+            ]
         }
     ]
 }
