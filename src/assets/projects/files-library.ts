@@ -9,6 +9,7 @@ import project7 from './project7'
 import project8 from './project8'
 import project9 from './project9'
 import project10 from './project10'
+import project11 from './project11'
 
 export const files: FileContent[] = [
     project1,
@@ -20,5 +21,6 @@ export const files: FileContent[] = [
     project7,
     project8,
     project9,
-    project10
+    project10,
+    project11
 ]

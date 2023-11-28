@@ -195,6 +195,25 @@
                     "iconName": "github"
                 }
             ]
+        },
+        {
+            "name": "OpenGL Solar System",
+            "description": "This project focuses on creating an interactive 3D solar system using C++ and OpenGL.",
+            "subFolders": [],
+            "files": [
+                {
+                    "name": "Project details",
+                    "fileContentID": 11,
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/solar-system-openGL",
+                    "iconName": "github"
+                }
+            ]
         }
     ]
 }
