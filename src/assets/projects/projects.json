@@ -172,7 +172,26 @@
                 },
                 {
                     "name": "GitHub",
-                    "link": "https://github.com/Minifixio/dhom-app",
+                    "link": "https://github.com/Minifixio/catacombs-scan",
+                    "iconName": "github"
+                }
+            ]
+        },
+        {
+            "name": "Co-Emplettes app",
+            "description": "Co-Emplettes is a mobile application designed to address the challenges faced by students around the Télécom Paris campus in accessing affordable groceries.",
+            "subFolders": [],
+            "files": [
+                {
+                    "name": "Project details",
+                    "fileContentID": 10,
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/coemplettes",
                     "iconName": "github"
                 }
             ]

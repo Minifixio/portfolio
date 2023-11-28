@@ -5,7 +5,8 @@
     align-items: center;
     overflow: auto;
     height: 90%;
-    padding-top: 10%;
+    justify-content: center;
+    /* padding-top: 10%; */
 }
 
 .project-div {
