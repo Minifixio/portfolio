@@ -243,7 +243,7 @@ export class WindowComponent implements OnInit {
 
   setMaximizeSize() {
     this.width = this.bounding.width-20
-    this.height = this.bounding.height*0.80
+    this.height = this.bounding.height-20
   }
 
   maximize() {
