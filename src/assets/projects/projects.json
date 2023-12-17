@@ -2,7 +2,8 @@
     "projects": [
         {
             "name": "Unlask",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "order": 10,
+            "description": "An app to learn things everytime you unlock your phone",
             "subFolders": [],
             "files": [
                 {
@@ -21,7 +22,8 @@
         },
         {
             "name": "BlackBoard Collaborate BOT",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "order": 4,
+            "description": "An app to add features to BlackBoard Collaborate",
             "subFolder": [],
             "files": [
                 {
@@ -45,7 +47,8 @@
         },
         {
             "name": "Highlit",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "order": 2,
+            "description": "An app to extract highlights from CSGO matches",
             "subFolders": [],
             "files": [
                 {
@@ -69,7 +72,8 @@
         },
         {
             "name": "Biggest Circle Inscribed In A Polygon",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "order": 5,
+            "description": "Research project on the biggest circle inscribed in a polygon",
             "subFolders": [],
             "files": [
                 {
@@ -88,7 +92,8 @@
         },
         {
             "name": "WewDashboard",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "order": 7,
+            "description": "Personal dashboard for my apartment",
             "subFolders": [],
             "files": [
                 {
@@ -107,7 +112,8 @@
         },
         {
             "name": "Sportify",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "order": 3,
+            "description": "Sync your music with your heart rate",
             "subFolders": [],
             "files": [
                 {
@@ -131,12 +137,18 @@
                     "name": "Video (in french)",
                     "link": "https://www.youtube.com/watch?v=Iybsk5PmKsU",
                     "iconName": "youtube"
+                },
+                {
+                    "name": "Promo video",
+                    "link": "https://www.youtube.com/watch?v=q8xBIE9x8y4",
+                    "iconName": "youtube"
                 }
             ]
         },
         {
             "name": "DOHM App",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "order": 8,
+            "description": "An app to manage your washing machine and dryer",
             "subFolders": [],
             "files": [
                 {
@@ -155,6 +167,7 @@
         },
         {
             "name": "Paris catacombs visit",
+            "order": 1,
             "description": "A webapp to visit our own scans of the Paris catacombs carried out with an iPhone 14 Pro LiDAR",
             "subFolders": [],
             "files": [
@@ -178,7 +191,8 @@
             ]
         },
         {
-            "name": "Co-Emplettes app",
+            "name": "Co-Emplettes App",
+            "order": 6,
             "description": "Co-Emplettes is a mobile application designed to address the challenges faced by students around the Télécom Paris campus in accessing affordable groceries.",
             "subFolders": [],
             "files": [
@@ -198,6 +212,7 @@
         },
         {
             "name": "OpenGL Solar System",
+            "order": 13, 
             "description": "This project focuses on creating an interactive 3D solar system using C++ and OpenGL.",
             "subFolders": [],
             "files": [
@@ -211,6 +226,87 @@
                 {
                     "name": "GitHub",
                     "link": "https://github.com/Minifixio/solar-system-openGL",
+                    "iconName": "github"
+                }
+            ]
+        },
+        {
+            "name": "Hexagonal Maze Generator and Solver",
+            "order": 14, 
+            "description": "Generate and solve hexagonal mazes using Java",
+            "subFolders": [],
+            "files": [
+                {
+                    "name": "Project details",
+                    "fileContentID": 12,
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/hexagonal-maze-solving-app",
+                    "iconName": "github"
+                }
+            ]
+        },
+        {
+            "name": "Decision trees builder",
+            "order": 9, 
+            "description": "Build decision trees using Python and evaluate them",
+            "subFolders": [],
+            "files": [
+                {
+                    "name": "Project details",
+                    "fileContentID": 13,
+                    "parentFolder": null
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/Minifixio/decision-trees",
+                    "iconName": "github"
+                }
+            ]
+        },
+        {
+            "name": "Twitch comments analysis tools",
+            "order": 11,
+            "description": "Various tools to analyze Twitch comments",
+            "subFolders": [],
+            "links": [
+                {
+                    "name": "Python analyser",
+                    "link": "https://github.com/Minifixio/twitch-video-comments-analyser",
+                    "iconName": "github"
+                },
+                {
+                    "name": "NPM Package",
+                    "link": "https://github.com/Minifixio/twitch-VOD-comments-graphs",
+                    "iconName": "github"
+                }
+            ]
+        },
+        {
+            "name": "Other projects",
+            "order": 16,
+            "description": "Other small projects",
+            "subFolders": [],
+            "links": [
+                {
+                    "name": "GoogleSheet to JSON",
+                    "link": "https://github.com/Minifixio/GoogleSheets-to-JSON",
+                    "iconName": "github"
+                },
+                {
+                    "name": "QT Drawing app",
+                    "link": "https://github.com/Minifixio/qt-drawing_app",
+                    "iconName": "github"
+                },
+                {
+                    "name": "PocketMine first 1vs1 plugin",
+                    "link": "https://github.com/Minifixio/pocketmine-1vs1-plugin",
                     "iconName": "github"
                 }
             ]

@@ -42,9 +42,8 @@ export class ProjectsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('Init projects')
     this.windowManagerService.resetWindows()
-    this.projects = (<any>projects.projects)
+    this.projects = (<any>projects.projects).sort((a: Project, b: Project) => a.order - b.order)
     this.windows$ = this.windowManagerService.getCurrentWindowsSubject().asObservable()
 
     this.meta.updateTag(

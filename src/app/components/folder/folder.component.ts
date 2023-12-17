@@ -26,6 +26,12 @@ export class FolderComponent implements OnInit, Folder {
   @Input('links')
   links!: Link[];
 
+  @Input('description')
+  description!: string;
+
+  @Input('order')
+  order!: number;
+
   window!: Window
   
   constructor(

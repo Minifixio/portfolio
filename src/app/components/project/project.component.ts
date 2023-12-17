@@ -16,6 +16,7 @@ export class ProjectComponent implements OnInit, Project {
   subFolders!: Folder[];
   files!: File[];
   links!: Link[];
+  order!: number;
 
   constructor() { }
   
